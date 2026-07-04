@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LinkLog Case Study | Wenshu Yang</title>
+    <meta
+      name="description"
+      content="LinkLog service design case study by Wenshu Yang: a CSV-driven follow-up workflow prototype for Links2Wellbeing social prescribing."
+    />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="linklog-case">
+    <div class="cursor-dot" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Wenshu Yang home">
+        <span class="brand-mark">
+          <img src="assets/logo-wenshu.png" alt="" />
+        </span>
+        <span>Wenshu Yang</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="index.html#work">Work</a>
+        <a href="about.html">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="case-hero section-shell" aria-labelledby="linklog-title">
+        <div class="case-device-stage linklog-device-stage" aria-label="LinkLog dashboard laptop mockup">
+          <img class="case-hero-image linklog-case-hero-image" src="assets/linklog/linklog-hero-dashboard.png" alt="LinkLog dashboard shown inside a laptop mockup" />
+        </div>
+
+        <div class="case-hero-grid">
+          <div class="case-intro">
+            <p class="case-label">LinkLog</p>
+            <h1 id="linklog-title">Turning scattered follow-up records into a clearer client story for Link Workers.</h1>
+            <p>
+              LinkLog is a CSV-driven service management prototype for OACAO’s Links2Wellbeing social prescribing program. It helps Link Workers prepare for follow-ups, scan client context, document interactions, and preserve reporting continuity across 3/6/12-month support cycles.
+            </p>
+            <div class="hero-actions">
+              <a class="button primary" href="#project-video">Watch Project Video ↓</a>
+              <a class="button secondary" href="#solution-highlights">View Solution ↓</a>
+            </div>
+          </div>
+
+          <aside class="case-facts" aria-label="Project details">
+            <div>
+              <h2>Client Context</h2>
+              <p>OACAO · Links2Wellbeing social prescribing program</p>
+            </div>
+            <div>
+              <h2>Role</h2>
+              <p>Service Design · UX Research · Workflow Design</p>
+            </div>
+            <div>
+              <h2>Team</h2>
+              <p>5-person service design team</p>
+            </div>
+            <div>
+              <h2>Timeline</h2>
+              <p>4-week focused design sprint</p>
+            </div>
+            <div>
+              <h2>Prototype Status</h2>
+              <p>Stakeholder-review prototype, not production deployment</p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="case-story section-shell">
+        <section class="case-section project-video-section" id="project-video" aria-labelledby="video-title">
+          <div class="case-story-heading compact">
+            <p class="eyebrow">Project Video</p>
+            <h2 id="video-title">Watch the quick version.</h2>
+            <p class="research-source">This short project video introduces the social prescribing context, the follow-up problem, and how LinkLog changes the workflow from scattered records to a clearer support process.</p>
+          </div>
+          <div class="video-frame">
+            <iframe
+              class="linklog-youtube-embed"
+              title="LinkLog Project Video"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <a class="button primary prototype-open" href="https://www.youtube.com/watch?v=4pdArOaAwHs" target="_blank" rel="noreferrer">Watch on YouTube ↗</a>
+        </section>
+
+        <section class="case-section" aria-labelledby="overview-title">
+          <div class="case-story-heading compact">
+            <p class="eyebrow">Case Overview</p>
+            <h2 id="overview-title">A follow-up workflow problem, not just a data problem.</h2>
+          </div>
+          <div class="overview-grid linklog-overview-grid linklog-case-overview-grid">
+            <article>
+              <span>Problem</span>
+              <p>Link Workers needed to support older adults across 3/6/12-month follow-ups, but client context was scattered across spreadsheets, paper notes, call records, and staff memory.</p>
+            </article>
+            <article>
+              <span>Design Direction</span>
+              <p>Make follow-up work visible, client history scannable, and interaction records consistent enough to support both relationship-based care and reporting.</p>
+            </article>
+            <article>
+              <span>Outcome</span>
+              <p>We built a CSV-driven LinkLog prototype with a priority dashboard for due / overdue follow-ups, client profiles for longitudinal context, a structured Log Call workflow, and a legacy tracker converter for stakeholder review.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="case-section" aria-labelledby="context-title">
+          <div class="case-story-heading compact">
+            <p class="eyebrow">Service Context</p>
+            <h2 id="context-title">Social prescribing depends on long-term relationship-based follow-up.</h2>
+            <p class="research-source">Links2Wellbeing connects older adults to community-based supports such as walking groups, chair yoga, coffee socials, art workshops, volunteer opportunities, and local programs. Link Workers do more than make referrals — they build relationships, understand barriers, and follow up over time.</p>
+          </div>
+          <div class="lifecycle-row linklog-service-flow" aria-label="Links2Wellbeing service flow">
+            <span>Referral</span>
+            <b aria-hidden="true">→</b>
+            <span>Intake</span>
+            <b aria-hidden="true">→</b>
+            <span>Participation Plan</span>
+            <b aria-hidden="true">→</b>
+            <span>Program Connection</span>
+            <b aria-hidden="true">→</b>
+            <span>3-month Follow-up</span>
+            <b aria-hidden="true">→</b>
+            <span>6-month Follow-up</span>
+            <b aria-hidden="true">→</b>
+            <span>12-month Follow-up</span>
+          </div>
+          <p class="linklog-note">The follow-up stage matters because staff need to understand whether the client participated, encountered barriers, felt more socially connected, or needs a new recommendation.</p>
+        </section>
+
+        <section class="case-section" aria-labelledby="inherited-title">
+          <div class="case-story-heading compact">
+            <p class="eyebrow">Inherited Research</p>
+            <h2 id="inherited-title">Building on previous service research.</h2>
+            <p class="research-source">Previous teams had already mapped the broader social prescribing journey and identified data management, referral coordination, and follow-up tracking as major pain points. Our team used that foundation to narrow the next step: turning the LinkLog concept into a working follow-up prototype that could be reviewed with stakeholders.</p>
+          </div>
+          <div class="testing-evidence-row linklog-research-stats" aria-label="Inherited research findings">
+            <article>
+              <strong>9/10</strong>
+              <span>locations relied on Excel.</span>
+            </article>
+            <article>
+              <strong>4/10</strong>
+              <span>cited missing automated reminders as a primary pain point.</span>
+            </article>
+            <article>
+              <strong>0/10</strong>
+              <span>could generate reports without manual compilation.</span>
+            </article>
+          </div>
+          <figure class="linklog-process-snapshot">
+            <img src="assets/linklog/linklog-service-design-map.png" alt="Service design map and previous process evidence for Links2Wellbeing follow-up workflows" />
+            <figcaption>These inherited findings helped us avoid starting from scratch and focus on a realistic next step for SALC workflows.</figcaption>
+          </figure>
+        </section>
+
+        <section class="case-section" aria-labelledby="reframe-title">
+          <div class="case-story-heading compact">
+            <p class="eyebrow">Problem Reframing</p>
+            <h2 id="reframe-title">The issue was not simply missing data.</h2>
+          </div>
+          <div class="linklog-reframe">
+            <article>
+              <span>Initial framing</span>
+              <p>OACAO was not receiving enough data from SALCs.</p>
+            </article>
+            <article>
+              <span>What we found</span>
+              <p>Follow-up context existed, but it was fragmented across local trackers, call notes, paper records, staff intuition, and inconsistent reporting formats.</p>
+            </article>
+            <article>
+              <span>Reframed opportunity</span>
+              <p>How might we help Link Workers prepare, document, and continue follow-ups without losing the client’s longitudinal story?</p>
+            </article>
+          </div>
+          <p class="linklog-note">The goal was not to collect more data. It was to make existing context easier to use during real service coordination.</p>
+        </section>
+
+        <section class="case-section" aria-labelledby="scope-title">
+          <div class="story-block linklog-scope-block">
+            <div class="story-kicker">Scope Decision</div>
+            <div>
+              <h3 id="scope-title">We narrowed the project to one high-value operational touchpoint.</h3>
+              <p>
+                With only four weeks, we chose not to redesign the entire social prescribing ecosystem. I pushed the team to focus on the follow-up and log-call workflow because it was a concrete, high-value touchpoint: staff needed to know who to call, what happened last time, what changed for the client, and what needed to happen next.
+              </p>
+              <div class="linklog-callout">
+                <strong>Why this mattered:</strong>
+                <p>A focused log-call workflow could reduce admin burden, support better client continuity, and create cleaner data for reporting without requiring a full CRM.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="case-section" aria-labelledby="collaboration-title">
+          <div class="story-block linklog-collaboration-block">
+            <div class="story-kicker">Collaboration</div>
+            <div>
+              <h3 id="collaboration-title">A team project shaped through shared service reasoning.</h3>
+              <p>
+                Our team worked collaboratively across research synthesis, blueprinting, workflow definition, usability testing, and stakeholder presentation. Because the final coded prototype could not be built collaboratively in real time, one teammate implemented it while the rest of us reviewed workflows, identified issues, and proposed changes.
+              </p>
+              <div class="linklog-role-card">
+                <span>My specific contributions</span>
+                <ul>
+                  <li>Helped narrow the project scope toward follow-up and Log Call instead of trying to solve the entire service ecosystem.</li>
+                  <li>Contributed to mid-fidelity Log Call workflow thinking that informed the final Log Call interface.</li>
+                  <li>Supported feasibility and implementation planning around lightweight CSV-based adoption.</li>
+                  <li>Reviewed prototype behavior and raised design issues for iteration.</li>
+                  <li>Contributed to storyboard and presentation narrative.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="case-section" aria-labelledby="evidence-title">
+          <div class="case-story-heading compact">
+            <p class="eyebrow">Service Design Process</p>
+            <h2 id="evidence-title">Mapping the backstage work behind the interface.</h2>
+          </div>
+          <div class="service-evidence-stack" aria-label="LinkLog service design process">
+            <article class="service-evidence-block">
+              <div class="service-evidence-copy">
+                <span>01 · Understand the current service</span>
+                <h3>Follow-up work was scattered across tools and memory.</h3>
+                <p>The current-state blueprint showed how follow-up work was distributed across paper records, spreadsheets, phone notes, reporting requirements, and worker memory. This helped us understand that the interface problem was actually a backstage coordination problem.</p>
+              </div>
+              <div class="service-evidence-gallery">
+                <img src="assets/linklog/linklog-current-service-blueprint.png" alt="Current service blueprint showing existing Link Worker follow-up journey and pain points" />
+              </div>
+            </article>
+            <article class="service-evidence-block">
+              <div class="service-evidence-copy">
+                <span>02 · Translate service pain points into workflow</span>
+                <h3>Service pain points became concrete product behavior.</h3>
+                <p>The future-state blueprint and user flow translated service pain points into product behavior: import local data, review priority follow-ups, scan client context, decide whether to start a follow-up, log the interaction, and update the record.</p>
+              </div>
+              <div class="service-evidence-gallery two">
+                <img src="assets/linklog/linklog-future-service-blueprint.png" alt="Future service blueprint showing how LinkLog changes the follow-up workflow" />
+                <img src="assets/linklog/linklog-user-flow.png" alt="User flow connecting CSV setup, dashboard review, client profile, call outcome decisions, log-call form, and update loop" />
+              </div>
+            </article>
+            <article class="service-evidence-block">
+              <div class="service-evidence-copy">
+                <span>03 · Communicate the intended staff experience</span>
+                <h3>The storyboard kept the workflow grounded in a real follow-up day.</h3>
+                <p>The storyboard helped ground the workflow in a real follow-up day: a Link Worker prepares for calls, reviews client context, speaks with an older adult, documents the interaction, and decides the next step.</p>
+              </div>
+              <div class="service-evidence-gallery">
+                <img src="assets/linklog/linklog-storyboard.png" alt="Storyboard showing a Link Worker preparing for and completing a follow-up call" />
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="case-section" aria-labelledby="goals-title">
+          <div class="case-story-heading compact">
+            <p class="eyebrow">Design Goals</p>
+            <h2 id="goals-title">What LinkLog needed to support.</h2>
+          </div>
+          <div class="pain-grid linklog-goal-grid">
+            <article>
+              <span>01</span>
+              <h3>Surface priority follow-ups</h3>
+              <p>Help staff see overdue, scheduled, and upcoming follow-ups without rebuilding task lists manually.</p>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>Make client context scannable</h3>
+              <p>Bring programs, barriers, preferences, contact history, and follow-up stage into one client profile.</p>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>Support relationship-based logging</h3>
+              <p>Document call outcomes, barriers, participation changes, concerns, recommendations, and next actions.</p>
+            </article>
+            <article>
+              <span>04</span>
+              <h3>Preserve reporting continuity</h3>
+              <p>Keep records consistent across dashboard, profile, interaction log, and CSV export.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="case-section" id="solution-highlights" aria-labelledby="solution-title">
+          <div class="case-story-heading compact">
+            <p class="eyebrow">Solution Highlights</p>
+            <h2 id="solution-title">A lightweight prototype for daily follow-up coordination.</h2>
+          </div>
+
+          <article class="feature-card linklog-feature-card">
+            <div class="feature-visual linklog-solution-visual">
+              <video class="linklog-feature-video" autoplay muted loop playsinline aria-label="LinkLog dashboard prioritization demo">
+                <source src="assets/linklog/linklog-dashboard-demo.mov" />
+              </video>
+            </div>
+            <div class="feature-copy">
+              <h3>Dashboard Prioritization</h3>
+              <p>Shows today’s follow-ups, overdue clients, scheduled calls, and contact attempts so Link Workers can start with the highest-priority work.</p>
+            </div>
+          </article>
+
+          <article class="feature-card reverse linklog-feature-card">
+            <div class="feature-visual linklog-solution-visual">
+              <video class="linklog-feature-video" autoplay muted loop playsinline aria-label="LinkLog client profile context demo">
+                <source src="assets/linklog/linklog-client-profile-demo.mov" />
+              </video>
+            </div>
+            <div class="feature-copy">
+              <h3>Client Profile Context</h3>
+              <p>Collects client details, program history, barriers, preferences, follow-up stage, and previous interactions so staff can prepare before contacting the client.</p>
+            </div>
+          </article>
+
+          <article class="feature-card linklog-feature-card">
+            <div class="feature-visual linklog-solution-visual">
+              <video class="linklog-feature-video" autoplay muted loop playsinline aria-label="LinkLog log-call workflow demo">
+                <source src="assets/linklog/linklog-log-call-demo.mov" />
+              </video>
+            </div>
+            <div class="feature-copy">
+              <h3>Log Call Workflow</h3>
+              <p>Guides staff through connected calls, missed calls, rescheduling, discontinued participation, participation updates, barriers, recommendations, and next actions.</p>
+            </div>
+          </article>
+
+          <article class="feature-card reverse linklog-feature-card">
+            <div class="feature-visual linklog-solution-visual">
+              <video class="linklog-feature-video" autoplay muted loop playsinline aria-label="LinkLog CSV and legacy tracker conversion demo">
+                <source src="assets/linklog/linklog-csv-converter-demo.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="feature-copy">
+              <h3>CSV / Legacy Tracker Conversion</h3>
+              <p>Maps existing spreadsheet data into a structure the prototype can read, reducing adoption friction for organizations that already rely on Excel or Google Sheets.</p>
+            </div>
+          </article>
+        </section>
+
+        <section class="case-section" aria-labelledby="iteration-title">
+          <div class="case-story-heading compact">
+            <p class="eyebrow">Testing & Iteration</p>
+            <h2 id="iteration-title">Usability testing helped us tighten the follow-up workflow.</h2>
+          </div>
+          <div class="linklog-iteration-grid">
+            <article>
+              <h3>Dashboard Prioritization</h3>
+              <dl class="iteration-evidence">
+                <dt>Finding</dt>
+                <dd>Participants were confused by priority logic, due date vs scheduled date, and which clients required immediate attention.</dd>
+                <dt>Change</dt>
+                <dd>Added priority indicators, sorting/filtering by priority, name, due date, and contact attempts. Client names were underlined to better indicate clickable navigation.</dd>
+                <dt>Why it mattered</dt>
+                <dd>The dashboard became a task coordination tool, not just a list of clients.</dd>
+              </dl>
+            </article>
+            <article>
+              <h3>Longitudinal Timeline</h3>
+              <dl class="iteration-evidence">
+                <dt>Finding</dt>
+                <dd>Participants struggled to understand completed stages, progression over time, and discontinued participation.</dd>
+                <dt>Change</dt>
+                <dd>Added completed-state checkmarks, clearer progression hierarchy, and a dedicated discontinuation state that visually stops the timeline.</dd>
+                <dt>Why it mattered</dt>
+                <dd>Staff could understand whether a client was active, progressing, interrupted, or discontinued.</dd>
+              </dl>
+            </article>
+            <article>
+              <h3>Interaction Logging</h3>
+              <dl class="iteration-evidence">
+                <dt>Finding</dt>
+                <dd>Participants found the logging workflow visually overwhelming and were confused by outcome terminology and reporting logic.</dd>
+                <dt>Change</dt>
+                <dd>Renamed “Complete” to “Connect,” added follow-up fields, improved outcome terminology, and preserved entered data when “Discontinue” was selected.</dd>
+                <dt>Why it mattered</dt>
+                <dd>The form better matched relationship-based care interactions and reduced accidental data loss.</dd>
+              </dl>
+            </article>
+            <article>
+              <h3>Context + Reporting Continuity</h3>
+              <dl class="iteration-evidence">
+                <dt>Finding</dt>
+                <dd>Participants struggled to locate client context and expected stronger consistency between dashboard, profile, and interaction views.</dd>
+                <dt>Change</dt>
+                <dd>Reorganized profile hierarchy, clarified labels/statuses, aligned data structures across views, and redesigned CSV output into a more readable operational format.</dd>
+                <dt>Why it mattered</dt>
+                <dd>Client context became easier to scan and more useful for long-term coordination and reporting.</dd>
+              </dl>
+            </article>
+          </div>
+          <div class="linklog-iteration-evidence" aria-label="Selected prototype evolution">
+            <div class="linklog-iteration-evidence-heading">
+              <span>Selected prototype evolution</span>
+              <p>These process snapshots show how the dashboard, client profile, and Log Call workflow changed as the team translated service pain points into a clearer follow-up tool.</p>
+            </div>
+            <div class="linklog-iteration-evidence-strip">
+              <article>
+                <h3>Dashboard Evolution</h3>
+                <div class="linklog-iteration-image-frame">
+                  <img src="assets/linklog/linklog-iteration-dashboard-evolution.png" alt="Dashboard prototype evolution showing changes from follow-up list to priority-based dashboard" />
+                </div>
+                <p>The dashboard moved from a general follow-up list toward a priority-based view that surfaces due / overdue clients, scheduled calls, contact attempts, and clear next actions.</p>
+              </article>
+              <article>
+                <h3>Client Profile Evolution</h3>
+                <div class="linklog-iteration-image-frame">
+                  <img src="assets/linklog/linklog-iteration-client-profile-evolution.png" alt="Client profile prototype evolution showing changes in client context, timeline, and interaction history" />
+                </div>
+                <p>The client profile evolved from scattered client details into a scannable longitudinal view with participation history, barriers, contact context, follow-up status, and interaction records.</p>
+              </article>
+              <article>
+                <h3>Log Call Evolution</h3>
+                <div class="linklog-iteration-image-frame">
+                  <img src="assets/linklog/linklog-iteration-log-call-evolution.png" alt="Log Call prototype evolution showing changes in follow-up outcome logging and next-step documentation" />
+                </div>
+                <p>The Log Call workflow became more structured around real follow-up outcomes: connected calls, missed calls, rescheduling, discontinuation, barriers, recommendations, and next steps.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="case-section" aria-labelledby="implementation-title">
+          <div class="case-story-heading compact">
+            <p class="eyebrow">Implementation Strategy</p>
+            <h2 id="implementation-title">Designed for low-cost adoption, not enterprise overhead.</h2>
+            <p class="research-source">LinkLog was designed as a local browser-based prototype that reads structured CSV files. This made it realistic for SALCs that already rely on Excel or Google Sheets and may not have dedicated IT support. If OACAO continues the concept, the same front-end logic could later be hosted online or connected to a database-backed system.</p>
+          </div>
+          <div class="overview-grid linklog-overview-grid linklog-implementation-grid">
+            <article>
+              <span>Local-first prototype</span>
+              <p>Runs in a browser using structured CSV files, reducing the need for new subscriptions or heavy infrastructure.</p>
+            </article>
+            <article>
+              <span>Legacy tracker conversion</span>
+              <p>Existing Google Sheet / Excel trackers can be converted into a LinkLog-ready CSV structure.</p>
+            </article>
+            <article>
+              <span>Low-maintenance adoption</span>
+              <p>The design respects the reality that many SALCs do not have dedicated IT support.</p>
+            </article>
+            <article>
+              <span>Future hosting path</span>
+              <p>If OACAO chooses to continue the concept, the interface could later be hosted online or redirected to a database-backed system.</p>
+            </article>
+          </div>
+          <p class="linklog-note">This was presented as a stakeholder-review prototype, not a confirmed production launch.</p>
+        </section>
+
+        <section class="case-section" aria-labelledby="feedback-title">
+          <div class="story-block linklog-feedback-block">
+            <aside class="linklog-feedback-sidebar">
+              <div class="story-kicker">Stakeholder Feedback</div>
+              <div class="stakeholder-role-row" aria-label="Stakeholder review roles">
+                <span>OACAO stakeholder</span>
+                <span>Implementation consultant</span>
+                <span>Quality assurance coordinator</span>
+                <span>Project / sustainability manager</span>
+              </div>
+            </aside>
+            <div>
+              <h3 id="feedback-title">The client responded most strongly to implementation realism.</h3>
+              <p>
+                During the final stakeholder presentation, the client responded positively to the prototype because it addressed a practical implementation problem: their existing Google Sheet / CSV data did not always import cleanly, and the LinkLog converter showed how legacy records could be made usable inside a clearer interface.
+              </p>
+              <p>
+                They also responded strongly to the Log Call workflow because it focused on the moment staff actually need support: preparing for a follow-up, recording what happened, and deciding what should happen next.
+              </p>
+              <div class="linklog-valued-list">
+                <span>What stakeholders valued</span>
+                <ul>
+                  <li>The local CSV / Google Sheet conversion approach addressed a realistic data compatibility problem.</li>
+                  <li>The Log Call workflow directly supported the moment staff needed help most: preparing, documenting, and deciding what happens next.</li>
+                  <li>The lightweight implementation path felt more realistic than a heavy CRM-style system.</li>
+                </ul>
+              </div>
+              <div class="linklog-callout caution">
+                <strong>Prototype review note:</strong>
+                <p>This feedback came from stakeholder review during the final presentation. It should be framed as qualitative validation, not measured operational impact or confirmed deployment.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="case-section" aria-labelledby="reflection-title">
+          <div class="case-story-heading compact">
+            <p class="eyebrow">Reflection</p>
+            <h2 id="reflection-title">What this project taught me about service design.</h2>
+          </div>
+          <div class="linklog-reflection-grid">
+            <article>
+              <h3>From interface thinking to service thinking</h3>
+              <p>Before this project, I mostly approached design through screens, flows, and usability issues. LinkLog pushed me to look further backstage. The friction was not only inside the interface — it came from fragmented records, inconsistent follow-up routines, reporting pressure, and worker memory holding the service together.</p>
+            </article>
+            <article>
+              <h3>Designing with operational reality</h3>
+              <p>This project taught me that a useful service tool has to fit the organization’s real constraints. A polished CRM-style concept would have been unrealistic for small SALCs with limited funding and no dedicated IT support. That is why our prototype stayed lightweight: local files, CSV import, readable records, and a workflow staff could understand without major training.</p>
+            </article>
+            <article>
+              <h3>Supporting care without over-structuring it</h3>
+              <p>The hardest part was balancing structure with relationship-based work. Link Workers are not just collecting data; they are checking in on older adults, listening for barriers, and deciding what support makes sense next. Good service design should reduce administrative load without turning human care into a rigid form-filling exercise.</p>
+            </article>
+            <article>
+              <h3>What I would do next</h3>
+              <p>If this project continued, I would test the prototype with more Link Workers in real follow-up scenarios, compare how long it takes to prepare for a call before and after LinkLog, and refine the reporting fields with OACAO so the data stays useful without becoming extra work for staff.</p>
+            </article>
+          </div>
+        </section>
+
+      </section>
+
+      <section class="contact" id="contact" aria-labelledby="contact-title">
+        <div class="contact-card section-shell">
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">Let's Chat!</h2>
+          <div class="contact-links">
+            <a href="mailto:wenshu.yang@mail.utoronto.ca">wenshu.yang@mail.utoronto.ca</a>
+            <a href="https://www.linkedin.com/in/wenshu-yang/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="#top">Back to top</a>
+          </div>
+          <p class="contact-footer">Designed and built for Wenshu Yang · 2026</p>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

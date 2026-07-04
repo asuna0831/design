@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToMuDo Case Study | Wenshu Yang</title>
+    <meta
+      name="description"
+      content="ToMuDo UX case study by Wenshu Yang: reducing task overwhelm through guided task breakdown."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="tomudo-case">
+    <div class="cursor-dot" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Wenshu Yang home">
+        <span class="brand-mark">
+          <img src="assets/logo-wenshu.png" alt="" />
+        </span>
+        <span>Wenshu Yang</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="index.html#work">Work</a>
+        <a href="about.html">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="case-hero section-shell" aria-labelledby="tomudo-title">
+        <div class="case-device-stage" aria-label="ToMuDo mobile app screens">
+          <img class="case-hero-image" src="assets/tomudo-case-hero.png" alt="Four ToMuDo mobile app screens showing schedule, new task, AI splitdown, and awards" />
+        </div>
+
+        <div class="case-hero-grid">
+          <div class="case-intro">
+            <p class="case-label">ToMuDo</p>
+            <h1 id="tomudo-title">Reducing task overwhelm through guided breakdown</h1>
+            <p>
+              ToMuDo is a mobile task management experience that helps students and young professionals overcome starting friction by breaking complex tasks into actionable steps.
+            </p>
+            <a
+              class="button primary prototype-cta"
+              href="#prototype"
+            >
+              View Interactive Prototype ↗
+            </a>
+          </div>
+
+          <aside class="case-facts" aria-label="Project details">
+            <div>
+              <h2>Product Type</h2>
+              <p>Mobile Application</p>
+            </div>
+            <div>
+              <h2>My Role</h2>
+              <p>UX / Product Designer</p>
+            </div>
+            <div>
+              <h2>Contribution</h2>
+              <p>After team research and mid-fidelity prototyping, I led the redesign of key flows, interaction structure, visual system, and high-fidelity prototype based on usability testing feedback.</p>
+            </div>
+            <div>
+              <h2>Tools</h2>
+              <p>Figma, Procreate</p>
+            </div>
+            <div>
+              <h2>Timeframe</h2>
+              <p>September - December 2025</p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="case-story section-shell">
+        <section class="case-section" aria-labelledby="why-title">
+          <div class="story-block">
+            <div class="story-kicker">Why This Project</div>
+            <div>
+              <h3 id="why-title">People do not always struggle because they cannot plan. They struggle because they cannot start.</h3>
+              <p>
+                Most productivity tools help users organize work after they already know what to do. ToMuDo explores how AI-assisted guidance can reduce task initiation friction by turning overwhelming work into a clear first step.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="case-section challenge-section" aria-labelledby="challenge-title">
+          <div class="case-story-heading">
+            <p class="eyebrow">The Challenge</p>
+            <h2 id="challenge-title">How might we help overwhelmed students move from “I don’t know where to start” to “I know my next step”?</h2>
+          </div>
+
+          <div class="pain-grid">
+            <article>
+              <span>01</span>
+              <h3>Large tasks feel overwhelming</h3>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>No clear first step</h3>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>Existing task tools require too much manual setup</h3>
+            </article>
+          </div>
+        </section>
+
+        <section class="case-section research-section" aria-labelledby="research-title">
+          <div class="case-story-heading compact">
+            <p class="eyebrow">Research Overview</p>
+            <h2 id="research-title">I started by understanding why students delay tasks even when they know the deadline.</h2>
+          </div>
+
+          <div class="research-method-grid">
+            <article class="method-card literature-method">
+              <div class="theory-chip-row" aria-label="Literature review themes">
+                <span>Cognitive Load</span>
+                <span>Fogg Behavior Model</span>
+                <span>Self Determination Theory</span>
+              </div>
+              <h3>Literature review</h3>
+              <p>Connected task initiation, motivation, and ambiguity.</p>
+            </article>
+            <article class="method-card audit-method">
+              <div class="competitor-logo-row" aria-label="Competitive audit tools">
+                <div class="competitor-chip">
+                  <img src="assets/microsoft-todo-logo.png" alt="Microsoft To Do logo" />
+                  <span>Microsoft To Do</span>
+                </div>
+                <div class="competitor-chip">
+                  <img src="assets/goblin-tools-logo.png" alt="Goblin.tools logo" />
+                  <span>Goblin.tools</span>
+                </div>
+                <div class="competitor-chip">
+                  <img src="assets/plancoach-logo.webp" alt="PlanCoach logo" />
+                  <span>PlanCoach</span>
+                </div>
+              </div>
+              <h3>Competitive audit</h3>
+              <p>Compared task setup, AI support, and progress cues.</p>
+            </article>
+            <article class="method-card interview-method">
+              <div class="method-visual">
+                <span class="method-icon" aria-hidden="true"></span>
+                <strong>8</strong>
+              </div>
+              <h3>Interviews</h3>
+              <p>Semi-structured conversations about planning, task anxiety, and starting friction.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="case-section" aria-labelledby="findings-title">
+          <div class="case-story-heading compact">
+            <p class="eyebrow">Key Findings</p>
+            <h2 id="findings-title">The research shifted the focus from motivation to clarity.</h2>
+          </div>
+
+          <div class="finding-grid">
+            <article>
+              <p class="quote-label">Competitive Audit</p>
+              <div class="competitive-issue-list" aria-label="Competitive audit findings">
+                <span>Microsoft To Do tracks tasks, but assumes users already know what steps to create.</span>
+                <span>Goblin.tools breaks tasks down, but does not connect breakdowns to scheduling or progress.</span>
+                <span>PlanCoach provides planning structure, but feels less integrated into daily execution.</span>
+              </div>
+              <h3>Existing tools help users manage tasks after clarity already exists.</h3>
+              <p><strong>Design implication</strong> ToMuDo should help users create clarity before asking them to manage it.</p>
+            </article>
+            <article>
+              <p class="quote-label">Interview Finding</p>
+              <blockquote class="sticky-quote">“If instructions are clear, I start earlier.”</blockquote>
+              <h3>Users don't avoid work. They avoid unclear first steps.</h3>
+              <p><strong>Design implication</strong> Design should make the next action immediately visible.</p>
+            </article>
+            <article>
+              <p class="quote-label">Interview Finding</p>
+              <blockquote class="sticky-quote">“I know I need to do it, but I don't know how to break it down.”</blockquote>
+              <h3>Planning itself becomes a task when the work feels too large.</h3>
+              <p><strong>Design implication</strong> AI guidance should reduce setup effort by suggesting a starting structure.</p>
+            </article>
+            <article>
+              <p class="quote-label">Behavioral Pattern</p>
+              <blockquote class="sticky-quote">Generic reminders were easy to ignore, while simple progress cues helped users feel control.</blockquote>
+              <h3>Progress works when it feels supportive, not punitive.</h3>
+              <p><strong>Design implication</strong> Motivation should make progress visible without adding pressure.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="case-section reframe-section" aria-labelledby="reframe-title">
+          <div class="case-story-heading compact">
+            <p class="eyebrow">Problem Reframing</p>
+            <h2 id="reframe-title">Research changed the product direction.</h2>
+          </div>
+
+          <div class="reframe-flow" aria-label="Problem reframing flow">
+            <article class="assumption-stage">
+              <span>Initial assumption</span>
+              <h3>Students procrastinate because they lack motivation.</h3>
+            </article>
+            <div class="flow-arrow">→</div>
+            <article class="research-stage">
+              <span>Research showed</span>
+              <h3>The blocker was not effort, but ambiguity at the beginning.</h3>
+            </article>
+            <div class="flow-arrow">→</div>
+            <article class="opportunity-stage">
+              <span>Reframed opportunity</span>
+              <h3>Make the first step clear, concrete, and easy to start.</h3>
+            </article>
+          </div>
+
+          <div class="reframe-statement">
+            <span>Design direction</span>
+            <p>Instead of motivating users harder, ToMuDo makes starting easier.</p>
+          </div>
+        </section>
+
+        <section class="case-section" aria-labelledby="principles-title">
+          <div class="case-story-heading compact">
+            <p class="eyebrow">Design Principles</p>
+            <h2 id="principles-title">These principles bridged research and the final product experience.</h2>
+            <p class="research-source">Three recurring themes emerged from the research and became the foundation for every design decision.</p>
+          </div>
+
+          <div class="insight-grid principle-grid">
+            <article>
+              <span>01</span>
+              <h3>Reduce Friction</h3>
+              <p>Make the first action visible, specific, and low-effort.</p>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>Increase Predictability</h3>
+              <p>Help users understand what happens next, especially in AI flows.</p>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>Support Motivation</h3>
+              <p>Use progress cues as reassurance, not another demand.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="case-section" aria-labelledby="mapping-title">
+          <div class="case-story-heading compact">
+            <p class="eyebrow">Evidence → Design</p>
+            <h2 id="mapping-title">Each product feature maps back to a research finding.</h2>
+          </div>
+
+          <div class="evidence-map">
+            <div class="evidence-map-row evidence-map-head">
+              <span>Research finding</span>
+              <span>Design principle</span>
+              <span>Design direction</span>
+              <span>Product feature</span>
+            </div>
+            <div class="evidence-map-row">
+              <span>Large tasks feel vague and undefined.</span>
+              <span>Reduce Friction</span>
+              <span>Make the first step concrete.</span>
+              <span>AI Task Breakdown</span>
+            </div>
+            <div class="evidence-map-row">
+              <span>Users need to understand what AI is doing.</span>
+              <span>Increase Predictability</span>
+              <span>Make the flow predictable and editable.</span>
+              <span>Editable Step Control</span>
+            </div>
+            <div class="evidence-map-row">
+              <span>Progress is motivating when it feels calm.</span>
+              <span>Support Motivation</span>
+              <span>Show momentum without creating pressure.</span>
+              <span>Gentle Motivation</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="case-section design-highlights" aria-labelledby="design-title">
+          <div class="case-story-heading">
+            <p class="eyebrow">Design Highlights / Final Experience</p>
+            <h2 id="design-title">The final experience helps users move from “too much” to “I know what to do next.”</h2>
+            <p class="research-source">The following design decisions translate research insights into a product experience that helps users move from uncertainty to action.</p>
+          </div>
+
+          <div class="feature-showcase">
+            <article class="feature-card">
+              <div class="feature-visual">
+                <img class="feature-image" src="assets/tomudo-feature-ai-breakdown.png" alt="ToMuDo AI task breakdown screens showing AI question and generated task steps" />
+              </div>
+              <div class="feature-copy">
+                <h3>AI Task Breakdown</h3>
+                <dl class="evidence-list">
+                  <dt>Insight</dt>
+                  <dd>Users struggled most when a task felt vague, undefined, and too large to begin.</dd>
+                  <dt>Design Response</dt>
+                  <dd>AI Mode turns a complex task into concrete, ordered steps with lightweight guidance.</dd>
+                  <dt>Experience</dt>
+                  <dd>Instead of facing the whole project at once, users can begin with one smaller action.</dd>
+                </dl>
+              </div>
+            </article>
+
+            <article class="feature-card reverse">
+              <div class="feature-visual">
+                <img class="feature-image" src="assets/tomudo-feature-scheduling.png" alt="ToMuDo scheduling screens showing task list, new task date and time, and schedule overview" />
+              </div>
+              <div class="feature-copy">
+                <h3>Task Scheduling</h3>
+                <dl class="evidence-list">
+                  <dt>Insight</dt>
+                  <dd>Guidance becomes more useful when users can connect steps to a specific time or deadline.</dd>
+                  <dt>Design Response</dt>
+                  <dd>The task creation flow includes date and time inputs before placing work into the schedule.</dd>
+                  <dt>Experience</dt>
+                  <dd>Breakdowns become actionable plans that fit into the user’s day, not just another list.</dd>
+                </dl>
+              </div>
+            </article>
+
+            <article class="feature-card">
+              <div class="feature-visual">
+                <img class="feature-image" src="assets/tomudo-feature-editable-steps.png" alt="ToMuDo editable generated steps screen with edit, add task, delete, and regenerate controls" />
+              </div>
+              <div class="feature-copy">
+                <h3>Editable Step Control</h3>
+                <dl class="evidence-list">
+                  <dt>Insight</dt>
+                  <dd>Users were more willing to trust AI support when they could see and shape the output.</dd>
+                  <dt>Design Response</dt>
+                  <dd>Generated steps are editable, adjustable, and supported by a Regenerate option.</dd>
+                  <dt>Experience</dt>
+                  <dd>Users keep control of the plan while still receiving structure from AI.</dd>
+                </dl>
+              </div>
+            </article>
+
+            <article class="feature-card reverse">
+              <div class="feature-visual">
+                <img class="feature-image" src="assets/tomudo-feature-motivation.png" alt="ToMuDo motivation screens showing awards, streaks, progress bars, and leaderboard" />
+              </div>
+              <div class="feature-copy">
+                <h3>Gentle Motivation</h3>
+                <dl class="evidence-list">
+                  <dt>Insight</dt>
+                  <dd>Visible progress helped users feel momentum, but heavy rewards risked creating pressure.</dd>
+                  <dt>Design Response</dt>
+                  <dd>Streaks, awards, and progress bars make progress visible without adding extra tasks.</dd>
+                  <dt>Experience</dt>
+                  <dd>The product supports consistency with a calm, reassuring tone instead of pressure.</dd>
+                </dl>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="case-section" aria-labelledby="iteration-title">
+          <div class="case-story-heading compact">
+            <p class="eyebrow">Iteration Highlights</p>
+            <h2 id="iteration-title">Usability testing helped convert friction into focused design changes.</h2>
+          </div>
+
+          <div class="testing-evidence-row" aria-label="Testing evidence summary">
+            <article>
+              <strong>8</strong>
+              <span>Participants</span>
+            </article>
+            <article>
+              <strong>3</strong>
+              <span>Key friction areas</span>
+            </article>
+            <article>
+              <strong>3</strong>
+              <span>Redesign focus areas</span>
+            </article>
+          </div>
+
+          <div class="iteration-stories">
+            <article class="iteration-story">
+              <div class="iteration-visual nav-iteration">
+                <img src="assets/tomudo-iteration-navigation.png" alt="Before and after homepage screens showing navigation and add button improvements" />
+                <span class="callout callout-one">Larger Add button</span>
+                <span class="callout callout-two">Clearer labels</span>
+                <span class="callout callout-three">Simplified icons</span>
+              </div>
+              <div class="iteration-copy">
+                <p class="feature-number">Iteration 01</p>
+                <h3>Navigation & Discoverability</h3>
+                <dl class="iteration-evidence">
+                  <dt>Problem</dt>
+                  <dd>Users struggled to identify primary actions and navigate the homepage efficiently.</dd>
+                  <dt>Key Improvements</dt>
+                  <dd>Increased visibility of the primary Add button, simplified navigation icons, and renamed ambiguous labels for better clarity.</dd>
+                  <dt>Impact</dt>
+                  <dd>Primary actions became easier to discover, reducing hesitation during task creation.</dd>
+                </dl>
+              </div>
+            </article>
+
+            <article class="iteration-story reverse">
+              <div class="iteration-visual ai-iteration">
+                <img src="assets/tomudo-iteration-ai-flow.png" alt="Before and after AI task breakdown screens showing clearer generated steps flow" />
+                <span class="callout callout-one">Concentration helper text</span>
+                <span class="callout callout-two">Editable task box</span>
+                <span class="callout callout-three">Regenerate option</span>
+              </div>
+              <div class="iteration-copy">
+                <p class="feature-number">Iteration 02</p>
+                <h3>AI Task Breakdown</h3>
+                <dl class="iteration-evidence">
+                  <dt>Problem</dt>
+                  <dd>Users felt uncertain after AI generated steps and needed more clarity and control over the output.</dd>
+                  <dt>Key Improvements</dt>
+                  <dd>Clarified the meaning of “Concentration Level,” added a step title, made generated task steps editable, and added a Regenerate option.</dd>
+                  <dt>Impact</dt>
+                  <dd>The AI output became easier to understand, adjust, and trust.</dd>
+                </dl>
+              </div>
+            </article>
+
+            <article class="iteration-story">
+              <div class="iteration-visual motivation-visual motivation-iteration">
+                <img src="assets/tomudo-iteration-motivation.png" alt="Motivation system before and after showing Rest, Bonus, Leaderboard consolidated into Award and Leaderboard" />
+                <span class="callout callout-one">Rest page removed</span>
+                <span class="callout callout-two">Progress bar</span>
+                <span class="callout callout-three">Medal ranking</span>
+              </div>
+              <div class="iteration-copy">
+                <p class="feature-number">Iteration 03</p>
+                <h3>Motivation System</h3>
+                <dl class="iteration-evidence">
+                  <dt>Problem</dt>
+                  <dd>The original reward system introduced unnecessary complexity and distracted users from completing tasks.</dd>
+                  <dt>Key Improvements</dt>
+                  <dd>Consolidated multiple reward pages into a simpler experience, added clearer progress tracking, and simplified leaderboard hierarchy.</dd>
+                  <dt>Impact</dt>
+                  <dd>Motivation shifted from collecting rewards to making consistent progress.</dd>
+                </dl>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="case-section reflection-section" aria-labelledby="reflection-title">
+          <div class="case-story-heading compact">
+            <p class="eyebrow">Reflection</p>
+            <h2 id="reflection-title">What ToMuDo taught me about designing for overwhelm.</h2>
+          </div>
+          <ul class="reflection-list">
+            <li>This project reframed how I think about productivity: the core issue was not simply procrastination, but task initiation friction.</li>
+            <li>I learned that AI support becomes more useful when users can understand, edit, and control the output instead of passively accepting automation.</li>
+            <li>If I continued this project, I would further test AI transparency, accessibility, and personalized planning patterns across different working styles.</li>
+          </ul>
+        </section>
+
+        <section class="case-section prototype-section" id="prototype" aria-labelledby="prototype-title">
+          <div class="case-story-heading compact">
+            <p class="eyebrow">Prototype</p>
+            <h2 id="prototype-title">Explore the final ToMuDo prototype.</h2>
+            <p class="research-source">Click through the final mobile experience and see how task breakdown, scheduling, and motivation work together.</p>
+          </div>
+
+          <div class="prototype-frame">
+            <iframe
+              src="https://embed.figma.com/proto/CmkeXLbUMjlXpbyWQJaJDM/ToMuDo-Prototype?node-id=2159-2442&amp;p=f&amp;viewport=126%2C260%2C0.15&amp;t=qrLvFbMvMczJLBjV-1&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;page-id=2006%3A995&amp;embed-host=share"
+              allowfullscreen
+              title="ToMuDo Figma prototype"
+            ></iframe>
+          </div>
+
+          <a
+            class="button primary prototype-open"
+            href="https://www.figma.com/proto/CmkeXLbUMjlXpbyWQJaJDM/ToMuDo-Prototype?node-id=2159-2442&amp;p=f&amp;viewport=126%2C260%2C0.15&amp;t=qrLvFbMvMczJLBjV-1&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;page-id=2006%3A995"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Open Figma Prototype ↗
+          </a>
+        </section>
+      </section>
+
+      <section class="contact" id="contact" aria-labelledby="contact-title">
+        <div class="contact-card section-shell">
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">Let's Chat!</h2>
+          <div class="contact-links">
+            <a href="mailto:wenshu.yang@mail.utoronto.ca">wenshu.yang@mail.utoronto.ca</a>
+            <a href="https://www.linkedin.com/in/wenshu-yang/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="#top">Back to top</a>
+          </div>
+          <p class="contact-footer">Designed and built for Wenshu Yang · 2026</p>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

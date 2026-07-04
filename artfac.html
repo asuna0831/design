@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ArtFac Case Study | Wenshu Yang</title>
+    <meta
+      name="description"
+      content="ArtFac UX case study by Wenshu Yang: designing trust into custom artwork commissions."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="artfac-case">
+    <div class="cursor-dot" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Wenshu Yang home">
+        <span class="brand-mark">
+          <img src="assets/logo-wenshu.png" alt="" />
+        </span>
+        <span>Wenshu Yang</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="index.html#work">Work</a>
+        <a href="about.html">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="case-hero section-shell" aria-labelledby="artfac-title">
+        <div class="case-device-stage artfac-device-stage" aria-label="ArtFac mobile commission platform screens">
+          <img class="case-hero-image artfac-case-hero-image" src="assets/artfac-case-hero.png" alt="Four ArtFac mobile app screens showing artist discovery, commission preview, milestone progress, and active commissions" />
+        </div>
+
+        <div class="case-hero-grid">
+          <div class="case-intro">
+            <p class="case-label">ArtFac</p>
+            <h1 id="artfac-title">Designing trust into custom artwork commissions.</h1>
+            <p>
+              ArtFac is a mobile commission platform that helps clients and artists define expectations, track creative progress, manage milestone payments, and handle revisions with more clarity and control.
+            </p>
+            <a class="button primary prototype-cta" href="#prototype">
+              View Interactive Prototype ↗
+            </a>
+          </div>
+
+          <aside class="case-facts" aria-label="Project details">
+            <div>
+              <h2>Product Type</h2>
+              <p>Mobile commission platform</p>
+            </div>
+            <div>
+              <h2>Context</h2>
+              <p>Academic project · group concept + individual redesign</p>
+            </div>
+            <div>
+              <h2>Role</h2>
+              <p>UX / Product Designer</p>
+            </div>
+            <div>
+              <h2>Timeline</h2>
+              <p>Jan-Apr 2026 · 8-week sprint</p>
+            </div>
+            <div>
+              <h2>Tools</h2>
+              <p>Figma</p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="case-story section-shell">
+        <section class="case-section" aria-labelledby="overview-title">
+          <div class="case-story-heading compact">
+            <p class="eyebrow">Case Overview</p>
+            <h2 id="overview-title">ArtFac turns informal art commissions into a structured trust workflow.</h2>
+          </div>
+
+          <div class="overview-grid">
+            <article>
+              <span>Problem</span>
+              <p>Custom art commissions are high-trust, high-ambiguity collaborations. Clients pay before the final work exists, while artists need protection from vague requests and uncontrolled revisions.</p>
+            </article>
+            <article>
+              <span>Design Direction</span>
+              <p>Turn an informal negotiation process into a structured commission workflow.</p>
+            </article>
+            <article>
+              <span>Solution</span>
+              <p>ArtFac makes expectations, milestone payments, progress updates, revision decisions, and artist communication visible throughout the client-side commission journey.</p>
+            </article>
+            <article>
+              <span>My Contribution</span>
+              <p>I contributed to group research, testing, and mid-fi exploration, then independently redesigned the final client-side flow, payment transparency, communication controls, visual system, and prototype.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="case-section" aria-labelledby="why-title">
+          <div class="story-block">
+            <div class="story-kicker">Why This Project</div>
+            <div>
+              <h3 id="why-title">Buying custom artwork is different from buying a finished product.</h3>
+              <p>
+                Clients make decisions before the final work exists. Artists also need protection from unclear expectations, unpaid labor, and uncontrolled revision requests.
+              </p>
+              <p>
+                ArtFac explores how a commission platform can reduce uncertainty by making expectations, progress, payment, and revision decisions visible throughout the collaboration.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="case-section" aria-labelledby="users-title">
+          <div class="case-story-heading compact">
+            <p class="eyebrow">Target Users</p>
+            <h2 id="users-title">A two-sided commission experience.</h2>
+          </div>
+
+          <div class="target-user-grid">
+            <article class="target-user-card">
+              <div class="portrait-avatar client-avatar">
+                <img src="assets/artfac-client-avatar.png" alt="Client commissioner portrait" />
+              </div>
+              <div>
+                <h3>Client</h3>
+                <p>People commissioning custom artwork who need clarity around expectations, payment timing, progress, and revision boundaries.</p>
+                <ul>
+                  <li>“I don’t know how detailed my request should be.”</li>
+                  <li>“I’m afraid of paying before knowing if I’ll like the result.”</li>
+                  <li>“I want to give feedback, but I don’t want to over-control the artist.”</li>
+                </ul>
+              </div>
+            </article>
+            <article class="target-user-card">
+              <div class="portrait-avatar artist-avatar">
+                <img src="assets/artfac-artist-avatar.png" alt="Independent artist portrait" />
+              </div>
+              <div>
+                <h3>Independent Artist</h3>
+                <p>Independent creators who need clear project rules, fair milestone payments, and protection from uncontrolled revisions.</p>
+                <ul>
+                  <li>“Will the scope stay clear?”</li>
+                  <li>“Will payment be released fairly?”</li>
+                  <li>“Can revision requests be managed without endless back-and-forth?”</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+
+          <p class="research-source">This case study focuses on the client-side mobile experience while considering artist needs through payment, revision, and collaboration rules.</p>
+        </section>
+
+        <section class="case-section" aria-labelledby="market-title">
+          <div class="case-story-heading compact">
+            <p class="eyebrow">Market Gap</p>
+            <h2 id="market-title">Existing platforms support discovery, but not the full commission lifecycle.</h2>
+            <p class="research-source">Market scan included finished-art marketplaces, freelance hiring platforms, and informal DM-based commission workflows.</p>
+          </div>
+
+          <div class="insight-grid market-gap-grid">
+            <article>
+              <span>01</span>
+              <h3>Ready-made marketplaces</h3>
+              <p>Good for browsing finished products, but weak for managing evolving custom work.</p>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>Freelance platforms</h3>
+              <p>Good for hiring, but payment, revision, and creative progress can feel transactional.</p>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>Informal social commissions</h3>
+              <p>Flexible, but often lack structured payment protection, progress visibility, and revision boundaries.</p>
+            </article>
+          </div>
+
+          <div class="synthesis-note">
+            <span>Gap focus</span>
+            <p>ArtFac focuses on the gap between buying finished artwork and informally negotiating a custom commission.</p>
+          </div>
+        </section>
+
+        <section class="case-section challenge-section" aria-labelledby="challenge-title">
+          <div class="case-story-heading">
+            <p class="eyebrow">The Challenge</p>
+            <h2 id="challenge-title">How might we help clients and artists collaborate on custom artwork with clearer expectations, safer payments, and more transparent progress?</h2>
+          </div>
+
+          <div class="pain-grid">
+            <article>
+              <span>01</span>
+              <h3>Unclear expectations before work begins</h3>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>Payment uncertainty during long creative processes</h3>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>Revision requests can expand scope, timeline, and cost</h3>
+            </article>
+          </div>
+        </section>
+
+        <section class="case-section" aria-labelledby="lifecycle-title">
+          <div class="case-story-heading compact">
+            <p class="eyebrow">Commission Lifecycle</p>
+            <h2 id="lifecycle-title">Mapping the commission journey from idea to final delivery.</h2>
+            <p class="research-source">Before redesigning the interface, we mapped two key flows: how clients initiate a commission and how they review progress through milestone approvals.</p>
+          </div>
+
+          <div class="flow-placeholder">
+            <div class="flow-image-frame">
+              <img src="assets/artfac-user-flow.png" alt="ArtFac user flow showing artist matching and project progress tracking workflows" />
+            </div>
+          </div>
+
+          <div class="lifecycle-row" aria-label="Simplified commission lifecycle">
+            <span>Describe idea</span>
+            <b aria-hidden="true">→</b>
+            <span>Add references & budget</span>
+            <b aria-hidden="true">→</b>
+            <span>Match / choose artist</span>
+            <b aria-hidden="true">→</b>
+            <span>Confirm collaboration</span>
+            <b aria-hidden="true">→</b>
+            <span>Review draft</span>
+            <b aria-hidden="true">→</b>
+            <span>Request edit or approve</span>
+            <b aria-hidden="true">→</b>
+            <span>Release milestone payment</span>
+            <b aria-hidden="true">→</b>
+            <span>Final delivery & review</span>
+          </div>
+        </section>
+
+        <section class="case-section research-section" aria-labelledby="validation-title">
+          <div class="case-story-heading compact">
+            <p class="eyebrow">Research & Validation</p>
+            <h2 id="validation-title">Testing showed that the workflow was usable, but trust broke down around payment, next steps, and control.</h2>
+          </div>
+
+          <div class="testing-context-strip">
+            <span>Testing context:</span>
+            <p>2 task-based usability tests · peer critique · individual redesign synthesis</p>
+          </div>
+
+          <div class="validation-snapshot">
+            <article class="validation-tested">
+              <h3>What we tested</h3>
+              <div class="validation-task">
+                <span>Task 1</span>
+                <p>Initiate a commission and review the milestone structure.</p>
+              </div>
+              <div class="validation-task">
+                <span>Task 2</span>
+                <p>Review a sketch update and approve payment or request changes.</p>
+              </div>
+              <p class="validation-note">Both tasks were completed, but users hesitated when payment consequences and next actions were not explicit enough.</p>
+            </article>
+
+            <article class="validation-changes">
+              <h3>What changed because of testing</h3>
+              <div>
+                <span>Task 2 observation</span>
+                <p><strong>Payment needed to be concrete.</strong> During the milestone review task, users could move through the flow but did not clearly understand when payment happened or how much would be released.</p>
+                <p><strong>Design response:</strong> Show exact amounts, paid balance, remaining balance, and payment status inside the milestone flow.</p>
+              </div>
+              <div>
+                <span>Peer critique</span>
+                <p><strong>Progress needed to explain the next action.</strong> The timeline made project status visible, but it did not always explain what would happen after approval or what decision the client needed to make.</p>
+                <p><strong>Design response:</strong> Add next-step explanations inside each milestone review state.</p>
+              </div>
+              <div>
+                <span>Testing + critique synthesis</span>
+                <p><strong>Control needed to stay visible.</strong> Users needed clearer ways to request changes, contact the artist, or exit the collaboration before the next milestone.</p>
+                <p><strong>Design response:</strong> Surface Request Edit, Conversation, Need Help, Request New Artist, Cancel Commission, and Report Issue inside the main workflow.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="methods-used-row">
+            <span>Methods used:</span>
+            <p>Group scope refinement · User flow mapping · Moderated usability testing · Peer critique · Individual redesign synthesis</p>
+          </div>
+        </section>
+
+        <section class="case-section" aria-labelledby="findings-title">
+          <div class="case-story-heading compact">
+            <p class="eyebrow">Key Findings</p>
+            <h2 id="findings-title">The flow worked, but trust depended on clarity.</h2>
+          </div>
+
+          <div class="finding-grid">
+            <article>
+              <p class="quote-label">Finding 01</p>
+              <h3>Payment transparency was weak.</h3>
+              <p><strong>Evidence</strong> During the milestone review task, users could move through the screen but did not clearly notice the payment details or understand whether payment happened at every stage.</p>
+              <p><strong>Design implication</strong> Payment information should be shown as exact amounts inside each milestone, not hidden in banners or percentages only.</p>
+            </article>
+            <article>
+              <p class="quote-label">Finding 02</p>
+              <h3>Progress was visible, but next actions were unclear.</h3>
+              <p><strong>Evidence</strong> Users understood that the project had a timeline, but the interface needed to explain what happened after approval and what the next client decision would trigger.</p>
+              <p><strong>Design implication</strong> Each milestone should explain what happened, what happens next, and what decision the client needs to make.</p>
+            </article>
+            <article>
+              <p class="quote-label">Finding 03</p>
+              <h3>Confirm & Pay overpowered revision options.</h3>
+              <p><strong>Evidence</strong> The primary Confirm & Pay CTA drew attention first, while Request Edit felt visually secondary, making the revision path easier to miss.</p>
+              <p><strong>Design implication</strong> Approval and revision actions need clearer hierarchy so users are not pushed toward payment before reviewing alternatives.</p>
+            </article>
+            <article>
+              <p class="quote-label">Finding 04</p>
+              <h3>Collaboration needed more control and communication.</h3>
+              <p><strong>Evidence</strong> Users needed a clearer place to see artist responses and a visible support path if they wanted to change artists, cancel, or report an issue before the next milestone.</p>
+              <p><strong>Design implication</strong> Conversation, Need Help, Request New Artist, Cancel Commission, and Report Issue should be part of the main workflow.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="case-section" aria-labelledby="principles-title">
+          <div class="case-story-heading compact">
+            <p class="eyebrow">Design Principles</p>
+            <h2 id="principles-title">Four principles guided the individual redesign.</h2>
+          </div>
+
+          <div class="insight-grid principle-grid artfac-principles">
+            <article>
+              <span>01</span>
+              <h3>Make commitment visible</h3>
+              <p>Show payment, ownership, and next-step consequences before users confirm.</p>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>Turn progress into guidance</h3>
+              <p>Do not only show where users are; show what they should do next.</p>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>Protect both sides</h3>
+              <p>Support client control while preventing unlimited revision pressure on artists.</p>
+            </article>
+            <article>
+              <span>04</span>
+              <h3>Keep collaboration visible</h3>
+              <p>Make feedback, artist responses, and help options part of the main workflow.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="case-section design-highlights" aria-labelledby="decisions-title">
+          <div class="case-story-heading">
+            <p class="eyebrow">Key Design Decisions</p>
+            <h2 id="decisions-title">Designing a more transparent commission workflow.</h2>
+            <p class="research-source">These three decisions show how the final client-side workflow turns a custom commission into a guided process: setting up the request, understanding milestone commitment, and staying in control during collaboration.</p>
+          </div>
+
+          <div class="feature-showcase">
+            <article class="feature-card">
+              <div class="feature-visual artfac-gif-visual">
+                <img class="artfac-feature-gif" src="assets/artfac/artfac-flow-guided-setup.gif" alt="ArtFac guided commission setup flow from homepage to commission request preview" />
+              </div>
+              <div class="feature-copy">
+                <h3>Guided Commission Setup</h3>
+                <p>The setup flow guides clients from the homepage CTA into a structured commission request, helping them describe their idea, add references, define budget expectations, and preview the milestone structure before moving forward.</p>
+                <ul class="feature-callouts">
+                  <li>Turns a vague idea into a structured brief</li>
+                  <li>Adds references and budget before matching</li>
+                  <li>Previews the commission structure early</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="feature-card reverse">
+              <div class="feature-visual artfac-gif-visual">
+                <img class="artfac-feature-gif" src="assets/artfac/artfac-flow-milestone-payment.gif" alt="ArtFac milestone progress and payment transparency flow" />
+              </div>
+              <div class="feature-copy">
+                <h3>Milestone Progress + Payment Transparency</h3>
+                <p>The milestone flow makes progress and payment visible together. Each stage explains what the client is reviewing, how much payment is tied to the step, and what will happen after approval.</p>
+                <ul class="feature-callouts">
+                  <li>Shows payment inside each milestone</li>
+                  <li>Explains what happens after approval</li>
+                  <li>Connects progress status with financial commitment</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="feature-card">
+              <div class="feature-visual artfac-gif-visual">
+                <img class="artfac-feature-gif" src="assets/artfac/artfac-flow-communication-control.gif" alt="ArtFac communication and control mechanism flow in active commissions" />
+              </div>
+              <div class="feature-copy">
+                <h3>Communication + Control Mechanism</h3>
+                <p>Communication and support actions are surfaced inside the commission workflow, so clients know where artist responses appear and what options they still have before committing to the next milestone.</p>
+                <ul class="feature-callouts">
+                  <li>Makes artist communication visible</li>
+                  <li>Surfaces support and help options</li>
+                  <li>Adds control paths like changing artist or canceling</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="case-section" aria-labelledby="iteration-title">
+          <div class="case-story-heading compact">
+            <p class="eyebrow">Iteration Highlights</p>
+            <h2 id="iteration-title">From group prototype to individual redesign.</h2>
+            <p class="research-source">I used usability testing and peer critique to redesign the commission workflow around clearer payment, stronger next-step guidance, more balanced actions, and visible collaboration controls.</p>
+          </div>
+
+          <div class="redesign-direction-summary">
+            <span>Redesign directions:</span>
+            <div class="redesign-direction-row" aria-label="ArtFac redesign directions">
+              <span>Payment transparency</span>
+              <span>System transparency</span>
+              <span>Action hierarchy</span>
+              <span>Artist control</span>
+              <span>Communication visibility</span>
+            </div>
+          </div>
+          <p class="iteration-note">A small typography adjustment was also applied across the final prototype to improve readability.</p>
+
+          <section class="artfac-iteration-carousel" aria-label="ArtFac iteration highlights">
+            <div class="carousel-controls">
+              <button type="button" class="carousel-button" data-carousel-prev aria-label="Previous iteration">←</button>
+              <span class="carousel-status" aria-live="polite">1 / 4</span>
+              <button type="button" class="carousel-button" data-carousel-next aria-label="Next iteration">→</button>
+            </div>
+
+            <div class="iteration-track">
+            <article class="artfac-iteration-slide">
+              <h3>Payment Transparency in Milestones</h3>
+              <div class="artfac-iteration-image">
+                <img src="assets/artfac/artfac-iteration-payment-transparency.png" alt="Before and after Preview screen showing payment percentages added to commission milestones" />
+              </div>
+              <div class="artfac-iteration-text-grid">
+                <div>
+                  <span>Problem</span>
+                  <p>Users could see the commission stages, but payment expectations were not explicit enough.</p>
+                </div>
+                <div>
+                  <span>Design Direction</span>
+                  <p>Surface payment information inside the milestone flow, showing exact payment percentages at each step instead of treating payment as separate banner information.</p>
+                </div>
+                <div>
+                  <span>Outcome</span>
+                  <p>The client can understand payment timing before publishing or confirming the commission.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="artfac-iteration-slide">
+              <h3>Progress Review + Communication Visibility</h3>
+              <div class="artfac-iteration-image">
+                <img src="assets/artfac/artfac-iteration-progress-review.png" alt="Before and after progress review screen showing payment summary, conversation thread, and Need Help options" />
+              </div>
+              <div class="artfac-iteration-text-grid">
+                <div>
+                  <span>Problem</span>
+                  <p>Users could review the draft, but payment status, artist response, and next-step consequences were not visible enough in the same workflow.</p>
+                </div>
+                <div>
+                  <span>Design Direction</span>
+                  <p>Add total / paid / remaining payment summary, show artist notes and conversation thread, and surface support options inside the review flow.</p>
+                </div>
+                <div>
+                  <span>Outcome</span>
+                  <p>The review screen becomes a decision hub, not just a payment confirmation screen.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="artfac-iteration-slide">
+              <h3>Commission Dashboard + Artist Control</h3>
+              <div class="artfac-iteration-image">
+                <img src="assets/artfac/artfac-iteration-dashboard-control.png" alt="Before and after Commissions dashboard showing latest update, quick actions, and More Options controls" />
+              </div>
+              <div class="artfac-iteration-text-grid">
+                <div>
+                  <span>Problem</span>
+                  <p>The dashboard showed active commissions, but users had limited visibility into recent updates and no clear exit strategy if collaboration felt risky.</p>
+                </div>
+                <div>
+                  <span>Design Direction</span>
+                  <p>Add latest update preview, quick action buttons, and a More Options menu with Request New Artist, Cancel Commission, and Report an Issue.</p>
+                </div>
+                <div>
+                  <span>Outcome</span>
+                  <p>Users can monitor commission status and access control options without digging into the full project page.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="artfac-iteration-slide">
+              <h3>Artist Confirmation + Commitment Clarity</h3>
+              <div class="artfac-iteration-image">
+                <img src="assets/artfac/artfac-iteration-artist-confirmation.png" alt="Before and after Artist Confirmation screen showing artist details, Change Artist, Confirm Artist, and commitment note" />
+              </div>
+              <div class="artfac-iteration-text-grid">
+                <div>
+                  <span>Problem</span>
+                  <p>Confirming an artist felt like a high-commitment action, but users did not have enough context or control before moving forward.</p>
+                </div>
+                <div>
+                  <span>Design Direction</span>
+                  <p>Add artist detail, portfolio access, Change Artist, confirmation CTA hierarchy, and a condition note clarifying that users can switch artists before the next stage without charge.</p>
+                </div>
+                <div>
+                  <span>Outcome</span>
+                  <p>Artist confirmation becomes more transparent and less risky for the client.</p>
+                </div>
+              </div>
+            </article>
+            </div>
+          </section>
+        </section>
+
+        <section class="case-section reflection-section" aria-labelledby="reflection-title">
+          <div class="case-story-heading compact">
+            <p class="eyebrow">Reflection</p>
+            <h2 id="reflection-title">Designing systems, not just screens.</h2>
+          </div>
+          <div class="reflection-list reflection-copy">
+            <p>This project changed how I think about progress tracking.</p>
+            <p>At first, I treated the timeline as the main trust mechanism. If users could see the commission stages, I assumed they would feel more confident. Testing and critique showed that visibility alone was not enough. Users also needed to know what each step meant: how much money would be released, what would happen after approval, and what choices they still had before moving forward.</p>
+            <p>The second challenge was control. Adding Request Edit, Change Artist, Cancel Commission, and Report Issue made the client-side flow feel safer, but these controls also create risk for artists if they are unlimited. A commission platform cannot only give clients more options; it also needs rules around when changes are allowed, when payment is protected, and how scope is negotiated.</p>
+            <p>If I continued this project, I would design and test the artist-side workflow next. I would focus on how artists accept requests, clarify scope, respond to revision limits, and protect their time while still keeping the collaboration flexible for clients.</p>
+          </div>
+        </section>
+
+        <section class="case-section prototype-section" id="prototype" aria-labelledby="prototype-title">
+          <div class="case-story-heading compact">
+            <p class="eyebrow">Prototype</p>
+            <h2 id="prototype-title">Explore the final ArtFac prototype.</h2>
+            <p class="research-source">Click through the final client-side commission workflow, from posting a request to reviewing progress, confirming payments, and managing revisions.</p>
+          </div>
+
+          <div class="prototype-frame">
+            <iframe
+              src="https://embed.figma.com/proto/XXF0xCjZAPx420IxGcFlrB/ArtFac?node-id=3241-5615&amp;p=f&amp;viewport=141%2C-234%2C0.22&amp;t=YCXfd8Vcm2OX2dJB-1&amp;scaling=scale-down&amp;content-scaling=fixed&amp;starting-point-node-id=449%3A731&amp;page-id=1%3A2&amp;embed-host=share"
+              allowfullscreen
+              title="ArtFac Figma prototype"
+            ></iframe>
+          </div>
+
+          <a
+            class="button primary prototype-open"
+            href="https://www.figma.com/proto/XXF0xCjZAPx420IxGcFlrB/ArtFac?node-id=3241-5615&amp;p=f&amp;viewport=141%2C-234%2C0.22&amp;t=YCXfd8Vcm2OX2dJB-1&amp;scaling=scale-down&amp;content-scaling=fixed&amp;starting-point-node-id=449%3A731&amp;page-id=1%3A2"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Open Figma Prototype ↗
+          </a>
+        </section>
+      </section>
+
+      <section class="contact" id="contact" aria-labelledby="contact-title">
+        <div class="contact-card section-shell">
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">Let's Chat!</h2>
+          <div class="contact-links">
+            <a href="mailto:wenshu.yang@mail.utoronto.ca">wenshu.yang@mail.utoronto.ca</a>
+            <a href="https://www.linkedin.com/in/wenshu-yang/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="#top">Back to top</a>
+          </div>
+          <p class="contact-footer">Designed and built for Wenshu Yang · 2026</p>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

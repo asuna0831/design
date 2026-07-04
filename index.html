@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wenshu Yang | UX Portfolio</title>
+    <meta
+      name="description"
+      content="Wenshu Yang is a UX designer and creative thinker designing thoughtful digital products, services, and workflows."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="cursor-dot" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Wenshu Yang home">
+        <span class="brand-mark">
+          <img src="assets/logo-wenshu.png" alt="" />
+        </span>
+        <span>Wenshu Yang</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="#work">Work</a>
+        <a href="about.html">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero section-shell" aria-labelledby="hero-title">
+        <div class="hero-stage">
+          <h1 id="hero-title">
+            <span>Hi, I am Wenshu Yang.</span>
+            <span>A UX designer.</span>
+          </h1>
+          <p class="hero-text">
+            I turn research, systems thinking, and tiny interaction details into products and services that feel easier to start, follow, and trust.
+          </p>
+          <div class="hero-actions" aria-label="Portfolio shortcuts">
+            <a class="button primary" href="#work">View Work</a>
+          </div>
+          <span class="hero-label location-label">Based in Toronto, CA</span>
+          <span class="hero-label mindset-label">Messy signals → clear systems.</span>
+        </div>
+      </section>
+
+      <section class="intro-strip" aria-label="Design focus">
+        <p>From clicks to clarity · reading behavior signals · structuring messy flows · designing with visual tone</p>
+      </section>
+
+      <section class="work section-shell" id="work" aria-labelledby="work-title">
+        <div class="section-heading">
+          <h2 class="eyebrow section-kicker" id="work-title">Selected Work</h2>
+        </div>
+
+        <div class="filter-bar" aria-label="Project filters">
+          <button class="filter-button is-active" type="button" data-filter="all">All</button>
+          <button class="filter-button" type="button" data-filter="mobile">Mobile</button>
+          <button class="filter-button" type="button" data-filter="service">Service</button>
+          <button class="filter-button" type="button" data-filter="commerce">Commerce</button>
+        </div>
+
+        <div class="project-grid">
+          <a class="project-card tomu" href="tomudo.html" data-category="mobile" aria-label="Read ToMuDo case study">
+            <div class="project-hero" aria-label="ToMuDo app screens">
+              <img class="project-hero-image tomudo-card-image" src="assets/tomudo-card-showcase.png" alt="Four ToMuDo mobile app screens shown as angled phone mockups" />
+            </div>
+            <div class="project-info">
+              <div class="project-meta">
+                <span>2025</span>
+              </div>
+              <h3>ToMuDo</h3>
+              <p>AI task management app that helps students and young professionals break down tasks, lower cognitive load, and build momentum.</p>
+              <div class="tags">
+                <span>AI</span>
+                <span>Mobile App</span>
+                <span>UX Research</span>
+                <span>Usability Testing</span>
+              </div>
+            </div>
+          </a>
+
+          <a class="project-card artfac" href="artfac.html" data-category="mobile" aria-label="Read ArtFac case study">
+            <div class="project-hero" aria-label="ArtFac mobile marketplace screens">
+              <img class="project-showcase-image artfac-showcase-image" src="assets/artfac-showcase.png" alt="ArtFac mobile app screens for a custom art commission marketplace" />
+            </div>
+            <div class="project-info">
+              <div class="project-meta">
+                <span>2026</span>
+              </div>
+              <h3>ArtFac</h3>
+              <p>Mobile marketplace for custom art commissions, improving artist-client collaboration with milestone payments, revision management, and progress tracking.</p>
+              <div class="tags">
+                <span>Marketplace</span>
+                <span>Mobile App</span>
+                <span>Workflow Design</span>
+                <span>Design System</span>
+              </div>
+            </div>
+          </a>
+
+          <a class="project-card linklog featured" href="linklog.html" data-category="service" aria-label="Read LinkLog case study">
+            <div class="project-hero" aria-label="Links2Wellbeing dashboard laptop mockup">
+              <img class="project-showcase-image links-showcase-image" src="assets/links2wellbeing-showcase.png" alt="Links2Wellbeing LinkLog dashboard mockup for social prescribing follow-up management" />
+            </div>
+            <div class="project-info">
+              <div class="project-meta">
+                <span>2026</span>
+              </div>
+              <h3>LinkLog</h3>
+              <p>Service design prototype for social prescribing follow-up.</p>
+              <div class="tags">
+                <span>Service Design</span>
+                <span>UX Research</span>
+                <span>Workflow Design</span>
+                <span>CSV Prototype</span>
+              </div>
+            </div>
+          </a>
+
+          <a class="project-card cupcake" href="cupcake.html" data-category="commerce" aria-label="Read Toronto Cupcake Redesign case study">
+            <div class="project-hero" aria-label="Toronto Cupcake responsive website mockup">
+              <img class="project-showcase-image cupcake-showcase-image" src="assets/toronto-cupcake-showcase.png" alt="Toronto Cupcake responsive website redesign mockups on laptops" />
+            </div>
+            <div class="project-info">
+              <div class="project-meta">
+                <span>2026</span>
+              </div>
+              <h3>Toronto Cupcake Redesign</h3>
+              <p>UX redesign of the Toronto Cupcake website, improving information architecture, ordering flow, and the overall shopping experience.</p>
+              <div class="tags">
+                <span>E-commerce</span>
+                <span>Information Architecture</span>
+                <span>Checkout UX</span>
+                <span>Responsive Design</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section class="contact" id="contact" aria-labelledby="contact-title">
+        <div class="contact-card section-shell">
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">Let's Chat!</h2>
+          <div class="contact-links">
+            <a href="mailto:wenshu.yang@mail.utoronto.ca">wenshu.yang@mail.utoronto.ca</a>
+            <a href="https://www.linkedin.com/in/wenshu-yang/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="#top">Back to top</a>
+          </div>
+          <p class="contact-footer">Designed and built for Wenshu Yang · 2026</p>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
