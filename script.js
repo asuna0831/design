@@ -35,6 +35,65 @@ filterButtons.forEach((button) => {
   });
 });
 
+const heroSheepZone = document.querySelector(".hero-sheep-zone");
+
+if (heroSheepZone) {
+  const heroSheepNote = heroSheepZone.querySelector(".hero-sheep-note");
+  const heroSheepVisual = heroSheepZone.querySelector(".hero-sheep-visual");
+  const heroSheepSvg = heroSheepZone.querySelector(".hero-sheep-svg");
+  const sheepNotes = [
+    { text: "Based in Toronto", theme: "toronto" },
+    { text: "Designing with curiosity & care", theme: "care" },
+  ];
+  let sheepNoteIndex = 0;
+  let sheepNoteTimer;
+
+  if (heroSheepSvg) {
+    heroSheepSvg.addEventListener("animationend", () => {
+      heroSheepSvg.classList.remove("is-jumping");
+    });
+  }
+
+  if (heroSheepVisual) {
+    heroSheepVisual.addEventListener("animationend", () => {
+      heroSheepVisual.classList.remove("is-hinting");
+    });
+
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (!prefersReducedMotion) {
+      window.setTimeout(() => {
+        heroSheepVisual.classList.add("is-hinting");
+      }, 1150);
+    }
+  }
+
+  heroSheepZone.addEventListener("click", () => {
+    if (!heroSheepNote) return;
+
+    const note = sheepNotes[sheepNoteIndex];
+    sheepNoteIndex = (sheepNoteIndex + 1) % sheepNotes.length;
+
+    window.clearTimeout(sheepNoteTimer);
+    heroSheepZone.classList.remove("is-visible");
+    void heroSheepZone.offsetWidth;
+
+    heroSheepNote.textContent = note.text;
+    heroSheepNote.dataset.noteTheme = note.theme;
+    heroSheepZone.classList.add("is-visible");
+
+    if (heroSheepSvg) {
+      heroSheepSvg.classList.remove("is-jumping");
+      void heroSheepSvg.offsetWidth;
+      heroSheepSvg.classList.add("is-jumping");
+    }
+
+    sheepNoteTimer = window.setTimeout(() => {
+      heroSheepZone.classList.remove("is-visible");
+    }, 2200);
+  });
+}
+
 document.querySelectorAll(".artfac-iteration-carousel").forEach((carousel) => {
   const track = carousel.querySelector(".iteration-track");
   const slides = Array.from(carousel.querySelectorAll(".artfac-iteration-slide"));

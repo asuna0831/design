@@ -153,6 +153,27 @@ nav a:hover {
 
 .hero-stage {
   position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(240px, 0.58fr);
+  align-items: center;
+  gap: clamp(2rem, 6vw, 6rem);
+  width: 100%;
+}
+
+.hero-copy {
+  display: grid;
+  align-content: center;
+}
+
+.hero-role-label {
+  width: fit-content;
+  margin: 0 0 0.85rem;
+  color: var(--coral);
+  font-size: clamp(0.82rem, 0.95vw, 0.95rem);
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  text-transform: uppercase;
 }
 
 .eyebrow {
@@ -185,16 +206,72 @@ h3 {
 }
 
 h1 {
-  max-width: 1240px;
-  margin-bottom: 1.35rem;
+  max-width: min(100%, 1060px);
+  margin-bottom: 1.25rem;
   font-family: "Inter", system-ui, sans-serif;
-  font-size: clamp(4.3rem, 7.35vw, 9.7rem);
+  font-size: clamp(3.45rem, 6.05vw, 7.9rem);
   font-weight: 900;
-  line-height: 1.02;
+  line-height: 0.96;
 }
 
-.hero h1 span {
+.hero h1 {
+  max-width: 760px;
+  margin-bottom: 1.4rem;
+  font-size: clamp(3rem, 4.8vw, 6.1rem);
+}
+
+.hero h1 > span {
   display: block;
+}
+
+.hero-role-label,
+.hero h1 > span,
+.hero-text,
+.hero-actions {
+  opacity: 0;
+  transform: translateY(14px);
+  animation: heroFadeUp 780ms cubic-bezier(0.2, 0.72, 0.18, 1) forwards;
+}
+
+.hero h1 > span:nth-child(1) {
+  animation-delay: 90ms;
+}
+
+.hero h1 > span:nth-child(2) {
+  animation-delay: 210ms;
+}
+
+.hero h1 > span:nth-child(3) {
+  animation-delay: 330ms;
+}
+
+.hero-text {
+  animation-delay: 490ms;
+}
+
+.hero-actions {
+  animation-delay: 650ms;
+}
+
+.hero-emphasis {
+  position: relative;
+  display: inline-block;
+  color: var(--coral);
+  font-style: italic;
+}
+
+.hero-emphasis::after {
+  content: "";
+  position: absolute;
+  left: 0.04em;
+  right: 0.02em;
+  bottom: 0.03em;
+  height: 0.045em;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--coral) 48%, #fff 52%);
+  transform: scaleX(0);
+  transform-origin: left center;
+  animation: drawPauseUnderline 760ms cubic-bezier(0.25, 0.78, 0.18, 1) 940ms forwards;
 }
 
 h2 {
@@ -208,19 +285,20 @@ h3 {
 }
 
 .hero-text {
-  max-width: 920px;
-  margin-top: clamp(2rem, 5vw, 4.5rem);
+  max-width: 620px;
+  margin-top: 0;
+  margin-bottom: 1.6rem;
   color: #4d4842;
-  font-size: clamp(1.2rem, 2vw, 2rem);
+  font-size: clamp(1.12rem, 1.48vw, 1.42rem);
   font-weight: 500;
-  line-height: 1.5;
+  line-height: 1.58;
 }
 
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 0.85rem;
-  margin-top: clamp(1.4rem, 3vw, 2.5rem);
+  margin-top: 0;
 }
 
 .button,
@@ -255,61 +333,294 @@ h3 {
   background: #fff;
 }
 
-.hero-label {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  min-height: clamp(4.4rem, 6vw, 6.3rem);
-  width: clamp(18rem, 24vw, 29rem);
-  padding: 1rem clamp(1.25rem, 2vw, 2.2rem);
-  border: 2px solid var(--line);
-  border-radius: 8px;
-  box-shadow: 4px 4px 0 rgba(36, 33, 31, 0.08);
-  font-size: clamp(1.05rem, 1.45vw, 1.65rem);
-  font-weight: 900;
-  line-height: 1.25;
+.hero-sheep-panel {
+  position: relative;
+  grid-column: 2;
+  display: grid;
+  place-items: center;
+  min-height: clamp(260px, 32vw, 400px);
 }
 
-.hero-label::before {
+.hero-sheep-zone {
+  position: relative;
+  justify-self: center;
+  display: grid;
+  place-items: center;
+  width: min(100%, 340px);
+  min-width: 0;
+  min-height: clamp(230px, 26vw, 340px);
+  padding: 0;
+  border: 0;
+  appearance: none;
+  background: transparent;
+  color: #6f6860;
+  cursor: pointer;
+  font: inherit;
+  opacity: 0;
+  text-align: left;
+  touch-action: manipulation;
+  transform: translateY(10px);
+  animation: heroFadeUp 720ms cubic-bezier(0.2, 0.72, 0.18, 1) 760ms forwards;
+}
+
+.hero-sheep-zone:focus-visible {
+  outline: 2px solid rgba(36, 33, 31, 0.32);
+  outline-offset: 6px;
+  border-radius: 18px;
+}
+
+.hero-sheep-visual {
+  position: relative;
+  display: block;
+  width: clamp(280px, 26vw, 380px);
+  transform-origin: 50% 94%;
+}
+
+.hero-sheep-zone:hover .hero-sheep-visual {
+  animation: sheepWobble 850ms cubic-bezier(0.32, 0.64, 0.35, 1.32);
+}
+
+.hero-sheep-visual.is-hinting {
+  animation: sheepWobble 850ms cubic-bezier(0.32, 0.64, 0.35, 1.32);
+}
+
+.hero-sheep-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+  transform-origin: 50% 96%;
+}
+
+.hero-sheep-svg.is-jumping {
+  animation: sheepJump 620ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.hero-sheep-art {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-sheep-shadow {
+  position: absolute;
+  left: 52%;
+  bottom: 3.5%;
+  z-index: 1;
+  width: 56%;
+  height: 5%;
+  transform: translateX(-50%);
+  background: var(--ink);
+  border-radius: 50%;
+  opacity: 0.1;
+  transition: opacity 300ms ease, transform 300ms ease;
+}
+
+.hero-sheep-zone:hover .hero-sheep-shadow {
+  transform: translateX(-50%) scaleX(0.92);
+  opacity: 0.14;
+}
+
+.sheep-shadow {
+  fill: var(--ink);
+  opacity: 0.1;
+  transition: opacity 300ms ease, transform 300ms ease;
+  transform-origin: 50% 50%;
+}
+
+.hero-sheep-zone:hover .sheep-shadow {
+  opacity: 0.14;
+  transform: scaleX(0.92);
+}
+
+.sheep-leg {
+  fill: var(--ink);
+}
+
+.sheep-wool {
+  fill: var(--paper);
+  stroke: var(--ink);
+  stroke-width: 7;
+  stroke-linejoin: round;
+}
+
+.sheep-ear,
+.sheep-head {
+  fill: var(--ink);
+}
+
+.sheep-eye {
+  fill: var(--paper);
+}
+
+.sheep-mouth {
+  fill: none;
+  stroke: var(--paper);
+  stroke-width: 4;
+  stroke-linecap: round;
+}
+
+.hero-sheep-note,
+.hero-sheep-baa {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.hero-sheep-zone.is-visible .hero-sheep-note {
+  animation: sheepNoteAppear 2.15s ease forwards;
+}
+
+.hero-sheep-zone.is-visible .hero-sheep-baa {
+  animation: sheepBaaAppear 1.2s ease forwards;
+}
+
+.hero-sheep-note {
+  bottom: 92%;
+  left: -1.6rem;
+  z-index: 4;
+  width: max-content;
+  max-width: 220px;
+  padding: 0.6rem 0.9rem;
+  background: #fff;
+  border: 2px solid var(--line);
+  border-radius: 14px;
+  filter: drop-shadow(3px 3px 0 rgba(36, 33, 31, 0.14));
+  text-align: left;
+  color: var(--ink);
+  font-size: clamp(0.9rem, 1.05vw, 1rem);
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: 0.01em;
+  white-space: normal;
+  transform: translateY(6px) scale(0.97) rotate(-5deg);
+}
+
+.hero-sheep-note::after {
   content: "";
   position: absolute;
-  top: 0.7rem;
-  left: 0.7rem;
-  width: 1rem;
-  aspect-ratio: 1;
-  background: var(--paper);
-  border: 2px solid var(--line);
-  border-radius: 50%;
+  bottom: -7.5px;
+  left: 70px;
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border-right: 2px solid var(--line);
+  border-bottom: 2px solid var(--line);
+  transform: rotate(45deg);
 }
 
-.location-label {
-  top: -5rem;
-  right: 7%;
-  background: #a8dcf0;
-  transform: rotate(12deg);
+.hero-sheep-note[data-note-theme="care"] {
+  color: var(--coral);
 }
 
-.mindset-label {
-  right: 0;
-  top: clamp(6.2rem, 9.8vw, 11.8rem);
-  background: #ffe8a6;
-  transform: rotate(-4deg);
+.hero-sheep-baa {
+  right: -0.4rem;
+  top: 11%;
+  z-index: 4;
+  color: var(--ink);
+  opacity: 0;
+  font-size: clamp(0.98rem, 1.6vw, 1.25rem);
+  font-weight: 800;
+  font-style: italic;
+  letter-spacing: 0.03em;
+  transform: translateY(8px) rotate(-13deg);
 }
 
 .intro-strip {
-  border-block: 2px solid var(--line);
-  background: var(--ink);
-  color: #fffdf8;
+  border-block: 1px solid rgba(36, 33, 31, 0.14);
+  background: #fff1c9;
+  color: #514c46;
   overflow: hidden;
 }
 
 .intro-strip p {
   width: max-content;
   margin: 0;
-  padding: 1rem 0;
-  font-size: clamp(1rem, 2vw, 1.35rem);
-  font-weight: 800;
-  animation: marquee 18s linear infinite;
+  padding: 0.86rem 0;
+  font-size: clamp(0.98rem, 1.45vw, 1.18rem);
+  font-weight: 650;
+  letter-spacing: 0.01em;
+  animation: marquee 30s linear infinite;
+}
+
+@keyframes heroFadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes drawPauseUnderline {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes sheepNoteAppear {
+  0% {
+    opacity: 0;
+    transform: translateY(8px) scale(0.96) rotate(-5deg);
+  }
+  14%,
+  78% {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotate(-5deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-4px) scale(0.98) rotate(-5deg);
+  }
+}
+
+@keyframes sheepBaaAppear {
+  0% {
+    opacity: 0;
+    transform: translateY(8px) rotate(-13deg);
+  }
+  18%,
+  68% {
+    opacity: 1;
+    transform: translateY(0) rotate(-13deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-5px) rotate(-13deg);
+  }
+}
+
+@keyframes sheepWobble {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(1, 1);
+  }
+  22% {
+    transform: translateY(-7px) rotate(-4deg) scale(1.03, 0.97);
+  }
+  48% {
+    transform: translateY(1px) rotate(3deg) scale(0.98, 1.02);
+  }
+  72% {
+    transform: translateY(-3px) rotate(-1.5deg) scale(1.01, 0.99);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg) scale(1, 1);
+  }
+}
+
+@keyframes sheepJump {
+  0% {
+    transform: translateY(0) scale(1, 1);
+  }
+  32% {
+    transform: translateY(-24px) scale(0.94, 1.08);
+  }
+  55% {
+    transform: translateY(0) scale(1.08, 0.9);
+  }
+  78% {
+    transform: translateY(-6px) scale(0.98, 1.03);
+  }
+  100% {
+    transform: translateY(0) scale(1, 1);
+  }
 }
 
 @keyframes marquee {
@@ -4137,17 +4448,49 @@ section[aria-labelledby="principles-title"] {
     min-height: auto;
   }
 
-  .hero-label {
-    position: relative;
-    inset: auto;
-    width: min(100%, 28rem);
-    margin-top: 1rem;
-    transform: rotate(-2deg);
+  .hero-stage {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
   }
 
-  .mindset-label {
-    margin-left: auto;
-    transform: rotate(2deg);
+  .hero-copy {
+    max-width: 100%;
+  }
+
+  .hero-sheep-panel {
+    grid-column: 1;
+    min-height: 13rem;
+    place-items: start;
+  }
+
+  .hero-sheep-zone {
+    position: relative;
+    inset: auto;
+    justify-self: start;
+    width: min(100%, 17rem);
+    min-width: 0;
+    min-height: 12rem;
+    margin-top: 0;
+  }
+
+  .hero-sheep-visual {
+    width: min(100%, 15.5rem);
+  }
+
+  .hero-sheep-note {
+    top: -1.2rem;
+    bottom: auto;
+    left: -0.2rem;
+    right: auto;
+    max-width: min(58vw, 13rem);
+    text-align: left;
+    white-space: normal;
+  }
+
+  .hero-sheep-baa {
+    left: auto;
+    right: -0.2rem;
+    top: 0.9rem;
   }
 
   .project-grid {
@@ -4401,7 +4744,8 @@ section[aria-labelledby="principles-title"] {
   }
 
   h1 {
-    font-size: clamp(3.4rem, 15vw, 5.4rem);
+    font-size: clamp(3rem, 13.2vw, 4.85rem);
+    line-height: 0.98;
   }
 
   .hero {
@@ -4470,7 +4814,15 @@ section[aria-labelledby="principles-title"] {
   *::after {
     scroll-behavior: auto !important;
     animation-duration: 0.01ms !important;
+    animation-delay: 0ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+
+  .hero-sheep-zone.is-visible .hero-sheep-note,
+  .hero-sheep-zone.is-visible .hero-sheep-baa {
+    opacity: 1;
+    transform: none;
+    animation: none !important;
   }
 }
