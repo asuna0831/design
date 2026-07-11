@@ -5588,10 +5588,13 @@ section[aria-labelledby="principles-title"] {
 /* Keep the print action aligned to the photo, not the wider machine shell. */
 .about-hero .print-strip {
   padding-bottom: 30px;
+  --print-strip-photo-width: clamp(82px, 8vw, 88px);
+  width: min(100%, 300px);
+  gap: 8px;
 }
 
 .about-hero .print-strip::before {
-  inset: 0 24px 18px;
+  inset: 0 22px 18px;
 }
 
 .about-hero .print-strip-button {
@@ -5601,16 +5604,45 @@ section[aria-labelledby="principles-title"] {
   bottom: auto;
   align-self: center;
   width: max-content;
-  margin: 10px auto 0;
+  margin: 8px auto 0;
   transform: none;
 }
 
 @media (max-width: 620px) {
   .about-hero .print-strip {
     padding-bottom: 28px;
+    --print-strip-photo-width: clamp(82px, 27vw, 88px);
+    width: min(100%, 280px);
   }
 
   .about-hero .print-strip::before {
     inset: 0 14px 16px;
   }
+}
+
+/* Keep the machine compact enough to read as a hero visual. */
+.about-hero .print-strip-plate {
+  width: 184px;
+  padding: 15px 12px 10px;
+}
+
+.about-hero .plate-text {
+  font-size: 13px;
+}
+
+.about-hero .print-strip-slot {
+  width: 174px;
+}
+
+.about-hero .print-strip-slot span {
+  width: 138px;
+}
+
+.about-hero .print-strip-machine {
+  width: min(100%, 210px);
+  padding-bottom: 12px;
+}
+
+.about-hero .print-strip-machine::before {
+  width: min(100%, 188px);
 }
