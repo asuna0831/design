@@ -142,74 +142,100 @@
             <h2 id="audit-title">The audit revealed three friction points in the ordering path.</h2>
           </div>
 
-          <div class="finding-grid cupcake-finding-grid">
-            <article>
-              <p class="quote-label">Finding 01</p>
-              <h3>Product path was hard to find.</h3>
-              <p><strong>Evidence</strong> The original homepage relied on hidden navigation and weak ordering cues. Decorative elements looked clickable, while the actual ordering path was buried in text and unclear menu organization.</p>
-              <p><strong>Design implication</strong> Make navigation and “Order Now” visible at first glance.</p>
-            </article>
-            <article>
-              <p class="quote-label">Finding 02</p>
-              <h3>Product browsing lacked shopping feedback.</h3>
-              <p><strong>Evidence</strong> The product page lacked filtering, persistent cart access, visible pricing, and clear product details, making it harder for users to compare options and track selections.</p>
-              <p><strong>Design implication</strong> Support browsing with filters, clearer product cards, visible prices, and persistent cart access.</p>
-            </article>
-            <article>
-              <p class="quote-label">Finding 03</p>
-              <h3>Cart-to-checkout transition was unclear.</h3>
-              <p><strong>Evidence</strong> Cart and checkout screens had weak action hierarchy, repeated information fields, unclear page progression, and limited backtracking options.</p>
-              <p><strong>Design implication</strong> Simplify the cart-to-checkout flow, clarify progress, and reduce repeated form entry.</p>
-            </article>
-          </div>
-
           <div class="audit-evidence-heading">
             <p class="eyebrow">Annotated Original-Site Audit</p>
             <p>Six annotated screens show how the original ordering path broke down across homepage entry, product browsing, cart review, and checkout.</p>
           </div>
 
-          <div class="audit-evidence-strip" aria-label="Annotated Original-Site Audit">
-            <article class="audit-evidence-card">
-              <h3>Homepage overview</h3>
-              <div class="audit-evidence-image">
-                <img src="assets/cupcake/cupcake-audit-homepage-overview.png" alt="Annotated audit screenshot of original Toronto Cupcake homepage issues" />
+          <div class="audit-evidence-strip cupcake-audit-stack" aria-label="Annotated Original-Site Audit grouped by finding">
+            <article class="cupcake-audit-block">
+              <div class="cupcake-audit-finding">
+                <p class="quote-label">Finding 01</p>
+                <h3>Product path was hard to find.</h3>
+                <p><strong>Evidence</strong> The original homepage relied on hidden navigation and weak ordering cues. Decorative elements looked clickable, while the actual ordering path was buried in text and unclear menu organization.</p>
+                <p><strong>Design implication</strong> Make navigation and “Order Now” visible at first glance.</p>
               </div>
-              <p>Hidden navigation, weak CTA visibility, clickable-looking decorative logos, and links buried in paragraphs made the ordering path hard to find.</p>
+
+              <div class="cupcake-audit-evidence-list">
+                <article class="cupcake-audit-evidence-row">
+                  <div class="audit-evidence-image">
+                    <img src="assets/cupcake/cupcake-audit-homepage-overview.png" alt="Annotated audit screenshot of original Toronto Cupcake homepage issues" />
+                  </div>
+                  <div class="cupcake-audit-evidence-copy">
+                    <h4>Homepage overview</h4>
+                    <p>Hidden navigation, weak CTA visibility, clickable-looking decorative logos, and links buried in paragraphs made the ordering path hard to find.</p>
+                  </div>
+                </article>
+                <article class="cupcake-audit-evidence-row">
+                  <div class="audit-evidence-image">
+                    <img src="assets/cupcake/cupcake-audit-side-navigation.png" alt="Annotated audit screenshot of original Toronto Cupcake side navigation issues" />
+                  </div>
+                  <div class="cupcake-audit-evidence-copy">
+                    <h4>Side navigation</h4>
+                    <p>The expanded menu did not clearly label ordering, and product categories were not organized around user shopping needs.</p>
+                  </div>
+                </article>
+              </div>
             </article>
-            <article class="audit-evidence-card">
-              <h3>Side navigation</h3>
-              <div class="audit-evidence-image">
-                <img src="assets/cupcake/cupcake-audit-side-navigation.png" alt="Annotated audit screenshot of original Toronto Cupcake side navigation issues" />
+
+            <article class="cupcake-audit-block">
+              <div class="cupcake-audit-finding">
+                <p class="quote-label">Finding 02</p>
+                <h3>Product browsing lacked shopping feedback.</h3>
+                <p><strong>Evidence</strong> The product page lacked filtering, persistent cart access, visible pricing, and clear product details, making it harder for users to compare options and track selections.</p>
+                <p><strong>Design implication</strong> Support browsing with filters, clearer product cards, visible prices, and persistent cart access.</p>
               </div>
-              <p>The expanded menu did not clearly label ordering, and product categories were not organized around user shopping needs.</p>
+
+              <div class="cupcake-audit-evidence-list">
+                <article class="cupcake-audit-evidence-row">
+                  <div class="audit-evidence-image">
+                    <img src="assets/cupcake/cupcake-audit-product-page.png" alt="Annotated audit screenshot of original Toronto Cupcake product browsing issues" />
+                  </div>
+                  <div class="cupcake-audit-evidence-copy">
+                    <h4>Product browsing</h4>
+                    <p>Products lacked filters, visible prices, persistent cart access, and clear details such as ingredients or allergens.</p>
+                  </div>
+                </article>
+              </div>
             </article>
-            <article class="audit-evidence-card">
-              <h3>Product browsing</h3>
-              <div class="audit-evidence-image">
-                <img src="assets/cupcake/cupcake-audit-product-page.png" alt="Annotated audit screenshot of original Toronto Cupcake product browsing issues" />
+
+            <article class="cupcake-audit-block">
+              <div class="cupcake-audit-finding">
+                <p class="quote-label">Finding 03</p>
+                <h3>Cart-to-checkout transition was unclear.</h3>
+                <p><strong>Evidence</strong> Cart and checkout screens had weak action hierarchy, repeated information fields, unclear page progression, and limited backtracking options.</p>
+                <p><strong>Design implication</strong> Simplify the cart-to-checkout flow, clarify progress, and reduce repeated form entry.</p>
               </div>
-              <p>Products lacked filters, visible prices, persistent cart access, and clear details such as ingredients or allergens.</p>
-            </article>
-            <article class="audit-evidence-card">
-              <h3>Cart review</h3>
-              <div class="audit-evidence-image">
-                <img src="assets/cupcake/cupcake-audit-cart-overview.png" alt="Annotated audit screenshot of original Toronto Cupcake cart review issues" />
+
+              <div class="cupcake-audit-evidence-list">
+                <article class="cupcake-audit-evidence-row">
+                  <div class="audit-evidence-image">
+                    <img src="assets/cupcake/cupcake-audit-cart-overview.png" alt="Annotated audit screenshot of original Toronto Cupcake cart review issues" />
+                  </div>
+                  <div class="cupcake-audit-evidence-copy">
+                    <h4>Cart review</h4>
+                    <p>Checkout actions were visually weak and poorly positioned, while secondary cart actions created hierarchy problems.</p>
+                  </div>
+                </article>
+                <article class="cupcake-audit-evidence-row">
+                  <div class="audit-evidence-image">
+                    <img src="assets/cupcake/cupcake-audit-processing-page.png" alt="Annotated audit screenshot of original Toronto Cupcake processing page issues" />
+                  </div>
+                  <div class="cupcake-audit-evidence-copy">
+                    <h4>Processing page</h4>
+                    <p>The order processing step added another page without clear back navigation, making the checkout flow feel fragmented.</p>
+                  </div>
+                </article>
+                <article class="cupcake-audit-evidence-row">
+                  <div class="audit-evidence-image">
+                    <img src="assets/cupcake/cupcake-audit-delivery-form.png" alt="Annotated audit screenshot of original Toronto Cupcake delivery form issues" />
+                  </div>
+                  <div class="cupcake-audit-evidence-copy">
+                    <h4>Delivery form</h4>
+                    <p>Sender and recipient fields repeated information, and the form structure made checkout feel longer than necessary.</p>
+                  </div>
+                </article>
               </div>
-              <p>Checkout actions were visually weak and poorly positioned, while secondary cart actions created hierarchy problems.</p>
-            </article>
-            <article class="audit-evidence-card">
-              <h3>Delivery form</h3>
-              <div class="audit-evidence-image">
-                <img src="assets/cupcake/cupcake-audit-delivery-form.png" alt="Annotated audit screenshot of original Toronto Cupcake delivery form issues" />
-              </div>
-              <p>Sender and recipient fields repeated information, and the form structure made checkout feel longer than necessary.</p>
-            </article>
-            <article class="audit-evidence-card">
-              <h3>Processing page</h3>
-              <div class="audit-evidence-image">
-                <img src="assets/cupcake/cupcake-audit-processing-page.png" alt="Annotated audit screenshot of original Toronto Cupcake processing page issues" />
-              </div>
-              <p>The order processing step added another page without clear back navigation, making the checkout flow feel fragmented.</p>
             </article>
           </div>
         </section>

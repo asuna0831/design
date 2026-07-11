@@ -3365,50 +3365,91 @@ section[aria-labelledby="principles-title"] {
 
 .audit-evidence-strip {
   display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: minmax(72%, 920px);
-  gap: 1rem;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  padding: 0.25rem 0.25rem 1rem;
+  gap: clamp(1rem, 2vw, 1.5rem);
+  overflow: visible;
+  padding: 0;
 }
 
-.audit-evidence-card {
-  scroll-snap-align: start;
+.cupcake-audit-stack {
+  margin-top: 0.25rem;
+}
+
+.cupcake-audit-block {
   display: grid;
-  gap: 0.85rem;
-  padding: clamp(1rem, 2vw, 1.5rem);
-  border: 2px solid var(--line);
-  border-radius: var(--radius);
-  background: #fff;
-  box-shadow: 5px 5px 0 rgba(36, 33, 31, 0.08);
+  gap: clamp(0.9rem, 1.8vw, 1.25rem);
+  padding: clamp(1rem, 2vw, 1.45rem);
+  border: 1px solid var(--case-line-soft, rgba(36, 33, 31, 0.1));
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.72);
 }
 
-.audit-evidence-card h3 {
+.cupcake-audit-finding {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.cupcake-audit-finding h3 {
   margin: 0;
-  font-size: clamp(1.3rem, 1.7vw, 1.65rem);
+  font-size: clamp(1.45rem, 2vw, 2rem);
   line-height: 1.15;
+}
+
+.cupcake-audit-finding p {
+  margin: 0;
+  color: #514c46;
+  font-size: 1.02rem;
+  line-height: 1.58;
+}
+
+.cupcake-audit-finding strong {
+  color: var(--ink);
+}
+
+.cupcake-audit-evidence-list {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.cupcake-audit-evidence-row {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.95fr) minmax(220px, 0.75fr);
+  gap: clamp(0.85rem, 1.8vw, 1.2rem);
+  align-items: center;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--case-line-subtle, rgba(36, 33, 31, 0.06));
+}
+
+.cupcake-audit-evidence-copy {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.cupcake-audit-evidence-copy h4 {
+  margin: 0;
+  color: var(--cupcake-hot-pink);
+  font-size: clamp(1.05rem, 1.35vw, 1.25rem);
+  line-height: 1.15;
+}
+
+.cupcake-audit-evidence-copy p {
+  margin: 0;
+  color: #514c46;
+  font-size: 1rem;
+  line-height: 1.55;
 }
 
 .audit-evidence-image {
   overflow: hidden;
-  border: 2px solid rgba(36, 33, 31, 0.12);
-  border-radius: var(--radius);
+  border: 1px solid var(--case-line-subtle, rgba(36, 33, 31, 0.06));
+  border-radius: 14px;
   background: #fff;
 }
 
 .audit-evidence-image img {
   display: block;
   width: 100%;
-  max-height: 620px;
+  max-height: 380px;
   object-fit: contain;
-}
-
-.audit-evidence-card p {
-  margin: 0;
-  color: #514c46;
-  font-size: 1rem;
-  line-height: 1.55;
 }
 
 .strategy-chip-grid {
@@ -4778,8 +4819,12 @@ section[aria-labelledby="principles-title"] {
     grid-auto-columns: 92%;
   }
 
-  .audit-evidence-strip {
-    grid-auto-columns: 92%;
+  .cupcake-audit-evidence-row {
+    grid-template-columns: 1fr;
+  }
+
+  .cupcake-audit-evidence-copy {
+    max-width: none;
   }
 
   .feature-card.reverse .feature-visual {
