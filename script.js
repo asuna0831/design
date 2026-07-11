@@ -158,3 +158,30 @@ document.addEventListener("DOMContentLoaded", () => {
   const origin = encodeURIComponent(window.location.origin);
   iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?enablejsapi=1&origin=${origin}`;
 });
+
+// Print strip: pick up / print again
+(() => {
+  const root = document.querySelector(".print-strip");
+  if (!root) return;
+
+  const button = root.querySelector(".print-strip-button");
+  if (!button) return;
+
+  const restartAnimation = (element) => {
+    if (!element) return;
+    element.style.animation = "none";
+    void element.offsetHeight;
+    element.style.animation = "";
+  };
+
+  button.addEventListener("click", () => {
+    const isPicked = root.classList.toggle("is-picked");
+    button.textContent = isPicked ? "Print again ↺" : "Pick up →";
+
+    if (!isPicked) {
+      restartAnimation(root.querySelector(".print-strip-window"));
+      restartAnimation(root.querySelector(".print-strip-paper"));
+      restartAnimation(root.querySelector(".print-strip-develop"));
+    }
+  });
+})();
