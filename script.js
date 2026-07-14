@@ -185,3 +185,92 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 })();
+
+// Toronto Cupcake: accessible in-page zoom for audit and wireframe evidence.
+(() => {
+  const dialog = document.querySelector(".cupcake-image-dialog");
+  if (!dialog) return;
+
+  const image = dialog.querySelector(".cupcake-image-dialog-image");
+  const closeButton = dialog.querySelector(".cupcake-image-dialog-close");
+  const triggers = Array.from(document.querySelectorAll(".cupcake-image-zoom-trigger"));
+
+  if (!image || !closeButton || !triggers.length) return;
+
+  let lastTrigger = null;
+  let lastScrollY = 0;
+  let previousScrollBehavior = "";
+
+  const openDialog = (trigger) => {
+    const fallbackImage = trigger.querySelector("img");
+    const src = trigger.dataset.zoomSrc || fallbackImage?.getAttribute("src");
+    const alt = trigger.dataset.zoomAlt || fallbackImage?.getAttribute("alt") || "";
+
+    if (!src) return;
+
+    lastTrigger = trigger;
+    lastScrollY = window.scrollY;
+    previousScrollBehavior = document.documentElement.style.scrollBehavior;
+    image.src = src;
+    image.alt = alt;
+
+    document.documentElement.style.scrollBehavior = "auto";
+    document.documentElement.classList.add("cupcake-zoom-open");
+    document.body.classList.add("cupcake-zoom-open");
+
+    if (typeof dialog.showModal === "function") {
+      dialog.showModal();
+    } else {
+      dialog.setAttribute("open", "");
+    }
+
+    closeButton.focus();
+  };
+
+  const closeDialog = () => {
+    if (dialog.open && typeof dialog.close === "function") {
+      dialog.close();
+    } else {
+      dialog.removeAttribute("open");
+      dialog.dispatchEvent(new Event("close"));
+    }
+  };
+
+  triggers.forEach((trigger) => {
+    trigger.addEventListener("click", () => openDialog(trigger));
+  });
+
+  closeButton.addEventListener("click", closeDialog);
+
+  dialog.addEventListener("click", (event) => {
+    if (event.target === dialog) {
+      closeDialog();
+    }
+  });
+
+  dialog.addEventListener("close", () => {
+    const restoreScrollY = lastScrollY;
+    const triggerToRestore = lastTrigger;
+
+    image.removeAttribute("src");
+    image.alt = "";
+    document.documentElement.classList.remove("cupcake-zoom-open");
+    document.body.classList.remove("cupcake-zoom-open");
+    window.scrollTo(0, restoreScrollY);
+
+    window.requestAnimationFrame(() => {
+      window.scrollTo(0, restoreScrollY);
+
+      if (triggerToRestore) {
+        try {
+          triggerToRestore.focus({ preventScroll: true });
+        } catch {
+          triggerToRestore.focus();
+          window.scrollTo(0, restoreScrollY);
+        }
+      }
+
+      document.documentElement.style.scrollBehavior = previousScrollBehavior;
+    });
+  });
+})();

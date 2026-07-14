@@ -5691,3 +5691,1036 @@ section[aria-labelledby="principles-title"] {
 .about-hero .print-strip-machine::before {
   width: min(100%, 188px);
 }
+
+
+/* === Toronto Cupcake Phase 2B publish overrides (Cupcake-scoped) === */
+.cupcake-case .cupcake-funnel-pipeline {
+  display: grid;
+  gap: clamp(0.9rem, 1.8vw, 1.35rem);
+  padding: clamp(1rem, 2vw, 1.4rem);
+  border: 1px solid rgba(247, 37, 160, 0.08);
+  border-radius: 26px;
+  background:
+    linear-gradient(180deg, rgba(255, 240, 247, 0.72), rgba(255, 255, 255, 0.84));
+}
+
+.cupcake-case .cupcake-funnel-stages {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: clamp(0.45rem, 1vw, 0.8rem);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cupcake-case .cupcake-funnel-stages li {
+  position: relative;
+  display: grid;
+  gap: 0.28rem;
+  min-height: 0;
+  padding: clamp(0.75rem, 1.25vw, 1rem);
+  border: 1px solid rgba(36, 33, 31, 0.045);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.cupcake-case .cupcake-funnel-stages li:not(:last-child)::after {
+  content: "→";
+  position: absolute;
+  top: 50%;
+  right: clamp(-0.72rem, -0.8vw, -0.48rem);
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 1.45rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--cupcake-hot-pink);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 900;
+  transform: translateY(-50%);
+}
+
+.cupcake-case .cupcake-funnel-stages span,
+.cupcake-case .cupcake-drop-step span {
+  color: #514c46;
+  font-size: clamp(0.78rem, 0.9vw, 0.9rem);
+  font-weight: 900;
+  line-height: 1.22;
+}
+
+.cupcake-case .cupcake-funnel-stages strong {
+  color: var(--ink);
+  font-size: clamp(1.85rem, 3vw, 3rem);
+  line-height: 0.95;
+}
+
+.cupcake-case .cupcake-funnel-drops {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(0.55rem, 1.2vw, 0.9rem);
+  align-items: stretch;
+}
+
+.cupcake-case .cupcake-drop-step {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  gap: 0.45rem;
+  min-height: 0;
+  padding: clamp(0.75rem, 1.2vw, 1rem);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.68);
+}
+
+.cupcake-case .cupcake-drop-step strong {
+  color: #514c46;
+  font-size: clamp(1.1rem, 1.5vw, 1.45rem);
+  line-height: 1;
+}
+
+.cupcake-case .cupcake-drop-meter {
+  position: relative;
+  height: 0.72rem;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(36, 33, 31, 0.08);
+}
+
+.cupcake-case .cupcake-drop-meter i {
+  display: block;
+  width: max(12%, calc(var(--drop-size) * 1%));
+  height: 100%;
+  border-radius: inherit;
+  background: rgba(247, 37, 160, 0.52);
+}
+
+.cupcake-case .cupcake-drop-step em {
+  width: fit-content;
+  margin: 0;
+  padding: 0.3rem 0.55rem;
+  border: 1px solid rgba(247, 37, 160, 0.26);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--cupcake-hot-pink);
+  font-size: 0.72rem;
+  font-style: normal;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.cupcake-case .cupcake-drop-step.is-largest {
+  border: 1px solid rgba(247, 37, 160, 0.22);
+  background: var(--cupcake-soft-pink);
+}
+
+.cupcake-case .cupcake-drop-step.is-largest strong {
+  color: var(--ink);
+  font-size: clamp(1.35rem, 2vw, 1.9rem);
+}
+
+.cupcake-case .cupcake-drop-step.is-largest .cupcake-drop-meter {
+  height: 0.92rem;
+  background: rgba(247, 37, 160, 0.16);
+}
+
+.cupcake-case .cupcake-drop-step.is-largest .cupcake-drop-meter i {
+  background: var(--cupcake-hot-pink);
+}
+.cupcake-case .cupcake-audit-editorial {
+  display: grid;
+  gap: clamp(1.75rem, 4vw, 3.5rem);
+}
+
+.cupcake-case .cupcake-audit-finding-block {
+  display: grid;
+  grid-template-columns: minmax(250px, 0.34fr) minmax(0, 0.66fr);
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+  align-items: start;
+  padding-block: clamp(1.25rem, 3vw, 2.5rem);
+  border-top: 1px solid rgba(36, 33, 31, 0.12);
+}
+
+.cupcake-case .cupcake-audit-finding-block:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.cupcake-case .cupcake-audit-copy {
+  display: grid;
+  gap: 0.65rem;
+  max-width: 24rem;
+}
+
+.cupcake-case .cupcake-audit-copy h3 {
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(1.5rem, 2.15vw, 2.25rem);
+  line-height: 1.12;
+}
+
+.cupcake-case .cupcake-audit-copy p {
+  margin: 0;
+  color: #514c46;
+  font-size: clamp(1rem, 1.08vw, 1.06rem);
+  line-height: 1.55;
+}
+
+.cupcake-case .cupcake-audit-copy strong {
+  display: block;
+  margin-bottom: 0.15rem;
+  color: var(--cupcake-hot-pink);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.cupcake-case .cupcake-audit-visuals {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.cupcake-case .cupcake-audit-visuals.two-up {
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  align-items: start;
+}
+
+.cupcake-case .cupcake-audit-visual-link {
+  position: relative;
+  display: grid;
+  gap: 0.45rem;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  appearance: none;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  text-decoration: none;
+  cursor: zoom-in;
+}
+
+.cupcake-case .cupcake-audit-visual-link img {
+  display: block;
+  width: 100%;
+  max-height: 520px;
+  object-fit: contain;
+  border-radius: 16px;
+  background: #fff;
+}
+
+.cupcake-case .cupcake-audit-visuals.two-up .cupcake-audit-visual-link:not(.is-dominant) img {
+  max-height: 430px;
+}
+
+.cupcake-case .cupcake-audit-visual-link:focus-visible {
+  outline: 3px solid rgba(247, 37, 160, 0.35);
+  outline-offset: 5px;
+  border-radius: 18px;
+}
+
+.cupcake-case .cupcake-principle-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1rem, 2.2vw, 1.6rem);
+  padding-block: clamp(0.25rem, 1vw, 0.75rem);
+}
+
+.cupcake-case .cupcake-principle-list article {
+  display: grid;
+  align-content: start;
+  gap: 0.45rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(36, 33, 31, 0.12);
+}
+
+.cupcake-case .cupcake-principle-list span {
+  color: var(--cupcake-hot-pink);
+  font-size: 0.82rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+}
+
+.cupcake-case .cupcake-principle-list h3 {
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(1.25rem, 1.6vw, 1.55rem);
+  line-height: 1.14;
+}
+
+.cupcake-case .cupcake-principle-list p {
+  max-width: 24rem;
+  margin: 0;
+  color: #514c46;
+  font-size: clamp(1rem, 1.08vw, 1.06rem);
+  line-height: 1.55;
+}
+
+.cupcake-case .cupcake-wireframe-study {
+  display: grid;
+  gap: clamp(0.9rem, 1.8vw, 1.25rem);
+  margin-top: clamp(0.8rem, 2vw, 1.4rem);
+}
+
+.cupcake-case .cupcake-wireframe-copy {
+  display: grid;
+  gap: 0.35rem;
+  max-width: 760px;
+}
+
+.cupcake-case .cupcake-wireframe-copy h3 {
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(1.45rem, 2.1vw, 2rem);
+  line-height: 1.14;
+}
+
+.cupcake-case .cupcake-wireframe-copy p {
+  margin: 0;
+  color: #514c46;
+  font-size: clamp(1rem, 1.1vw, 1.08rem);
+  line-height: 1.55;
+}
+
+.cupcake-case .cupcake-wireframe-link {
+  position: relative;
+  display: grid;
+  gap: 0.55rem;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  appearance: none;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  text-decoration: none;
+  cursor: zoom-in;
+}
+
+.cupcake-case .cupcake-wireframe-link img {
+  display: block;
+  width: 100%;
+  max-height: 720px;
+  object-fit: contain;
+  border-radius: 16px;
+  background: #fff;
+}
+
+.cupcake-case .cupcake-wireframe-link:focus-visible {
+  outline: 3px solid rgba(247, 37, 160, 0.35);
+  outline-offset: 5px;
+  border-radius: 18px;
+}
+
+.cupcake-case .cupcake-image-zoom-trigger::after {
+  content: "Zoom";
+  position: absolute;
+  top: 0.7rem;
+  right: 0.7rem;
+  padding: 0.42rem 0.62rem;
+  border: 1px solid rgba(36, 33, 31, 0.14);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--cupcake-hot-pink);
+  font-size: 0.78rem;
+  font-weight: 900;
+  line-height: 1;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.cupcake-case .cupcake-image-zoom-trigger:hover::after,
+.cupcake-case .cupcake-image-zoom-trigger:focus-visible::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cupcake-case.cupcake-zoom-open {
+  width: 100%;
+  overflow: hidden;
+}
+
+html.cupcake-zoom-open {
+  overflow: hidden;
+}
+
+.cupcake-case .cupcake-image-dialog {
+  width: 100vw;
+  max-width: none;
+  height: 100dvh;
+  max-height: none;
+  margin: 0;
+  padding: clamp(1rem, 3vw, 2rem);
+  border: 0;
+  background: transparent;
+  color: inherit;
+}
+
+.cupcake-case .cupcake-image-dialog::backdrop {
+  background: rgba(24, 22, 21, 0.78);
+}
+
+.cupcake-case .cupcake-image-dialog[open] {
+  display: grid;
+  place-items: center;
+}
+
+.cupcake-case .cupcake-image-dialog-inner {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: min(100%, 1280px);
+  height: 100%;
+}
+
+.cupcake-case .cupcake-image-dialog-title {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.cupcake-case .cupcake-image-dialog-close {
+  position: fixed;
+  top: clamp(0.8rem, 2vw, 1.35rem);
+  right: clamp(0.8rem, 2vw, 1.35rem);
+  z-index: 2;
+  display: inline-grid;
+  place-items: center;
+  width: 2.8rem;
+  aspect-ratio: 1;
+  border: 1px solid rgba(36, 33, 31, 0.16);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--ink);
+  font-size: 1.55rem;
+  font-weight: 800;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.cupcake-case .cupcake-image-dialog-close:focus-visible {
+  outline: 3px solid rgba(247, 37, 160, 0.4);
+  outline-offset: 4px;
+}
+
+.cupcake-case .cupcake-image-dialog-image {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: calc(100dvh - clamp(4.8rem, 9vw, 7rem));
+  object-fit: contain;
+  border-radius: 14px;
+  background: #fff;
+}
+.cupcake-case .case-hero {
+  padding-block: clamp(2.25rem, 4vw, 3.75rem) clamp(3.25rem, 5.2vw, 4.75rem);
+}
+
+.cupcake-case .case-device-stage {
+  min-height: clamp(150px, 18vw, 260px);
+  margin-bottom: clamp(1.1rem, 2.2vw, 1.85rem);
+}
+
+.cupcake-case .cupcake-case-hero-image {
+  max-height: 270px;
+}
+
+.cupcake-case .case-hero-grid {
+  gap: clamp(1.75rem, 4.8vw, 4.5rem);
+}
+
+.cupcake-case .case-hero-grid > * {
+  min-width: 0;
+}
+
+.cupcake-case .cupcake-hero-copy {
+  display: grid;
+  align-content: start;
+  gap: clamp(0.85rem, 1.4vw, 1.15rem);
+  min-width: 0;
+}
+
+.cupcake-case .cupcake-hero-copy .case-label,
+.cupcake-case .cupcake-hero-copy h1,
+.cupcake-case .cupcake-hero-copy p {
+  margin: 0;
+}
+
+.cupcake-case .cupcake-hero-copy h1 {
+  max-width: 780px;
+  font-size: clamp(2.8rem, 3.65vw, 3.95rem);
+  line-height: 1.06;
+  font-weight: 900;
+}
+
+.cupcake-case .cupcake-hero-copy > p:not(.case-label):not(.cupcake-design-question) {
+  max-width: 660px;
+  font-size: clamp(1.05rem, 1.18vw, 1.16rem);
+  line-height: 1.55;
+}
+
+.cupcake-case .cupcake-design-question {
+  max-width: 620px;
+  margin-top: clamp(0.15rem, 0.7vw, 0.45rem);
+  padding-top: clamp(0.85rem, 1.3vw, 1rem);
+  border-top: 1px solid rgba(247, 37, 160, 0.28);
+  color: #3f3934;
+  font-size: clamp(1.18rem, 1.55vw, 1.45rem);
+  font-weight: 900;
+  line-height: 1.28;
+}
+
+.cupcake-case .cupcake-hero-copy .prototype-cta {
+  margin-top: clamp(0.45rem, 1vw, 0.9rem);
+}
+
+.cupcake-case .case-facts {
+  gap: clamp(0.85rem, 1.5vw, 1.2rem);
+  padding: clamp(1.1rem, 1.85vw, 1.55rem);
+}
+
+.cupcake-case .case-facts h2 {
+  margin-bottom: 0.3rem;
+  font-size: clamp(0.78rem, 0.95vw, 0.88rem);
+}
+
+.cupcake-case .case-facts p {
+  font-size: clamp(0.95rem, 1.08vw, 1.05rem);
+  line-height: 1.45;
+}
+
+.cupcake-case .cupcake-overview-row {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
+  padding-block: clamp(0.25rem, 0.7vw, 0.65rem);
+}
+
+.cupcake-case .cupcake-overview-row .cupcake-overview-item {
+  min-height: 0;
+  padding: clamp(0.65rem, 1.5vw, 1rem) clamp(1rem, 2vw, 1.45rem);
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.cupcake-case .cupcake-overview-row .cupcake-overview-item + .cupcake-overview-item {
+  border-left: 1px solid rgba(36, 33, 31, 0.14);
+}
+
+.cupcake-case .cupcake-overview-row span {
+  color: var(--cupcake-hot-pink);
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+}
+
+.cupcake-case .cupcake-overview-row p {
+  max-width: 24rem;
+  font-size: clamp(1.02rem, 1.1vw, 1.08rem);
+  line-height: 1.55;
+}
+
+@media (max-width: 900px) {
+  .cupcake-case .cupcake-funnel-stages {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .cupcake-case .cupcake-funnel-stages li:nth-child(3)::after {
+    display: none;
+  }
+
+  .cupcake-case .cupcake-funnel-drops {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .cupcake-case .cupcake-audit-finding-block {
+    grid-template-columns: 1fr;
+  }
+
+  .cupcake-case .cupcake-audit-copy {
+    max-width: 42rem;
+  }
+
+  .cupcake-case .cupcake-audit-visuals.two-up {
+    grid-template-columns: 1fr;
+  }
+
+  .cupcake-case .cupcake-principle-list {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .cupcake-case .cupcake-principle-list article + article {
+    margin-top: 1rem;
+  }
+
+  .cupcake-case .case-hero-grid {
+    gap: clamp(1.4rem, 4vw, 2.2rem);
+  }
+
+  .cupcake-case .case-facts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .cupcake-case .cupcake-overview-row {
+    grid-template-columns: 1fr;
+    padding-block: 0;
+  }
+
+  .cupcake-case .cupcake-overview-row .cupcake-overview-item {
+    padding-inline: 0;
+  }
+
+  .cupcake-case .cupcake-overview-row .cupcake-overview-item + .cupcake-overview-item {
+    border-left: 0;
+    border-top: 1px solid rgba(36, 33, 31, 0.12);
+  }
+
+  .cupcake-case .cupcake-overview-row p {
+    max-width: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .cupcake-case .cupcake-funnel-pipeline {
+    grid-template-columns: 1fr;
+    padding: 0.75rem;
+  }
+
+  .cupcake-case .cupcake-funnel-stages,
+  .cupcake-case .cupcake-funnel-drops {
+    grid-template-columns: 1fr;
+  }
+
+  .cupcake-case .cupcake-funnel-stages li:not(:last-child)::after {
+    top: auto;
+    right: auto;
+    bottom: -0.84rem;
+    left: 50%;
+    transform: translateX(-50%) rotate(90deg);
+  }
+
+  .cupcake-case .cupcake-funnel-stages li:nth-child(3)::after {
+    display: grid;
+  }
+
+  .cupcake-case .cupcake-funnel-stages strong {
+    font-size: 2.05rem;
+  }
+
+  .cupcake-case .cupcake-audit-finding-block {
+    gap: 1rem;
+    padding-block: 1.75rem;
+  }
+
+  .cupcake-case .cupcake-audit-copy {
+    max-width: none;
+  }
+
+  .cupcake-case .cupcake-audit-visual-link {
+    gap: 0.5rem;
+  }
+
+  .cupcake-case .cupcake-audit-visual-link img {
+    max-height: none;
+  }
+
+  .cupcake-case .cupcake-wireframe-link img {
+    max-height: none;
+  }
+
+  .cupcake-case .cupcake-image-dialog {
+    padding: 0.75rem;
+  }
+
+  .cupcake-case .cupcake-image-dialog-close {
+    width: 2.45rem;
+    font-size: 1.35rem;
+  }
+
+  .cupcake-case .cupcake-image-dialog-image {
+    max-height: calc(100dvh - 4.6rem);
+  }
+
+  .cupcake-case .site-header {
+    gap: 0.45rem;
+    padding-inline: 0.65rem;
+  }
+
+  .cupcake-case .site-header nav {
+    gap: 0.12rem;
+  }
+
+  .cupcake-case .brand {
+    gap: 0.42rem;
+    font-size: 0.92rem;
+  }
+
+  .cupcake-case .brand-mark {
+    width: 38px;
+    height: 38px;
+    flex-basis: 38px;
+  }
+
+  .cupcake-case .site-header nav a {
+    padding-inline: 0.32rem;
+    font-size: 0.74rem;
+  }
+
+  .cupcake-case .case-device-stage {
+    min-height: 190px;
+  }
+
+  .cupcake-case .case-hero-grid,
+  .cupcake-case .cupcake-hero-copy {
+    width: min(100%, calc(100vw - 2rem));
+    max-width: calc(100vw - 2rem);
+  }
+
+  .cupcake-case .cupcake-case-hero-image {
+    width: min(84%, 320px);
+  }
+
+  .cupcake-case .cupcake-hero-copy .case-label {
+    max-width: 100%;
+    font-size: 1rem;
+    overflow-wrap: break-word;
+  }
+
+  .cupcake-case .cupcake-hero-copy h1 {
+    max-width: min(100%, 20rem);
+    font-size: clamp(1.9rem, 8.6vw, 2.18rem);
+    overflow-wrap: anywhere;
+  }
+
+  .cupcake-case .cupcake-hero-copy > p:not(.case-label),
+  .cupcake-case .cupcake-hero-copy .prototype-cta {
+    max-width: min(100%, 20.5rem);
+    overflow-wrap: break-word;
+  }
+
+  .cupcake-case .case-facts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 1rem;
+    gap: 0.8rem 0.9rem;
+  }
+
+  .cupcake-case .case-facts p {
+    font-size: 0.93rem;
+  }
+}
+
+/* Toronto Cupcake Round 4: decision-led Key Improvements */
+.cupcake-case .cupcake-improvements {
+  gap: clamp(1.25rem, 2.4vw, 2rem);
+}
+
+.cupcake-case .cupcake-improvements .case-story-heading {
+  max-width: 820px;
+}
+
+.cupcake-case .cupcake-decision-showcase {
+  gap: 0;
+}
+
+.cupcake-case .cupcake-decision-card,
+.cupcake-case .cupcake-decision-card.reverse {
+  display: grid;
+  grid-template-columns: minmax(0, 1.58fr) minmax(280px, 0.92fr);
+  grid-template-areas:
+    "visual intro"
+    "visual details";
+  gap: clamp(1.5rem, 4vw, 4rem);
+  align-items: center;
+  padding: clamp(2.25rem, 5vw, 4rem) 0;
+  border-radius: 0;
+  background:
+    linear-gradient(to bottom, transparent calc(100% - 1px), var(--case-line-soft) 0);
+}
+
+.cupcake-case .cupcake-decision-card.reverse {
+  grid-template-columns: minmax(280px, 0.92fr) minmax(0, 1.58fr);
+  grid-template-areas:
+    "intro visual"
+    "details visual";
+}
+
+.cupcake-case .cupcake-decision-card:last-child {
+  background: transparent;
+}
+
+.cupcake-case .cupcake-decision-card .cupcake-screen-visual,
+.cupcake-case .cupcake-decision-card.reverse .cupcake-screen-visual {
+  grid-area: visual;
+  order: 0;
+  min-height: 0;
+  padding: 0;
+  background: transparent;
+}
+
+.cupcake-case .cupcake-decision-intro {
+  grid-area: intro;
+  align-self: end;
+  display: grid;
+  gap: clamp(0.7rem, 1.2vw, 0.95rem);
+  max-width: 520px;
+}
+
+.cupcake-case .cupcake-decision-details {
+  grid-area: details;
+  align-self: start;
+  display: grid;
+  gap: clamp(0.85rem, 1.4vw, 1.1rem);
+  max-width: 520px;
+}
+
+.cupcake-case .cupcake-decision-label {
+  width: fit-content;
+  margin: 0;
+  padding: 0.34rem 0.55rem;
+  border-radius: 999px;
+  background: var(--cupcake-pink-light);
+  color: var(--cupcake-hot-pink);
+  font-size: 0.82rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.cupcake-case .cupcake-decision-intro h3 {
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(1.75rem, 2.55vw, 2.65rem);
+  line-height: 1.08;
+  letter-spacing: 0;
+}
+
+.cupcake-case .cupcake-decision-section {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.cupcake-case .cupcake-decision-section span {
+  color: var(--cupcake-hot-pink);
+  font-size: 0.82rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.cupcake-case .cupcake-decision-section p,
+.cupcake-case .cupcake-decision-section li {
+  margin: 0;
+  color: #514c46;
+  font-size: clamp(1rem, 1.08vw, 1.08rem);
+  line-height: 1.55;
+}
+
+.cupcake-case .cupcake-decision-section ul {
+  display: grid;
+  gap: 0.28rem;
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.cupcake-case .cupcake-decision-card .browser-screen-frame {
+  border-radius: 16px;
+  background: #fff;
+}
+
+.cupcake-case .cupcake-decision-card .browser-bar-mini {
+  height: 26px;
+  background: rgba(255, 240, 247, 0.72);
+}
+
+.cupcake-case .cupcake-decision-card .cupcake-feature-screen {
+  max-height: min(64vh, 620px);
+}
+
+@media (max-width: 900px) {
+  .cupcake-case .cupcake-decision-card,
+  .cupcake-case .cupcake-decision-card.reverse {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "intro"
+      "visual"
+      "details";
+    gap: 1.2rem;
+    padding: clamp(1.75rem, 5vw, 2.6rem) 0;
+  }
+
+  .cupcake-case .cupcake-decision-intro,
+  .cupcake-case .cupcake-decision-details {
+    max-width: none;
+  }
+
+  .cupcake-case .cupcake-decision-card .cupcake-feature-screen {
+    max-height: none;
+  }
+}
+
+/* Toronto Cupcake: supporting experience previews */
+.cupcake-case .cupcake-supporting-experience {
+  margin-top: clamp(1rem, 3vw, 2.8rem);
+  gap: clamp(1.2rem, 2.4vw, 2rem);
+}
+
+.cupcake-case .cupcake-supporting-experience .case-story-heading {
+  max-width: 860px;
+}
+
+.cupcake-case .cupcake-supporting-layout {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1rem, 2vw, 1.5rem);
+  align-items: start;
+}
+
+.cupcake-case .cupcake-supporting-preview {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0;
+}
+
+.cupcake-case .cupcake-supporting-image {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--case-line-soft);
+  border-radius: 18px;
+  background: #fff;
+  cursor: zoom-in;
+}
+
+.cupcake-case .cupcake-supporting-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.cupcake-case .cupcake-supporting-preview .cupcake-supporting-image {
+  aspect-ratio: 4 / 5;
+}
+
+.cupcake-case .cupcake-supporting-preview figcaption {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.cupcake-case .cupcake-supporting-preview figcaption span {
+  color: var(--cupcake-hot-pink);
+  font-size: 0.82rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.cupcake-case .cupcake-supporting-preview figcaption p {
+  max-width: 38rem;
+  margin: 0;
+  color: #514c46;
+  font-size: clamp(0.96rem, 1vw, 1.04rem);
+  line-height: 1.5;
+}
+
+/* Toronto Cupcake Round 5: calm ending and reflection */
+.cupcake-case .cupcake-reflection-section {
+  gap: clamp(1rem, 2vw, 1.6rem);
+  margin-top: clamp(1rem, 2.4vw, 2.2rem);
+}
+
+.cupcake-case .cupcake-reflection-open {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1.5rem, 4vw, 4rem);
+  padding-block: clamp(0.35rem, 1vw, 0.75rem);
+}
+
+.cupcake-case .cupcake-reflection-column {
+  display: grid;
+  align-content: start;
+  gap: 0.65rem;
+}
+
+.cupcake-case .cupcake-reflection-column + .cupcake-reflection-column {
+  padding-left: clamp(1.25rem, 3vw, 2.6rem);
+  border-left: 1px solid var(--case-line-soft);
+}
+
+.cupcake-case .cupcake-reflection-column span,
+.cupcake-case .cupcake-validation-line span {
+  color: var(--cupcake-hot-pink);
+  font-size: 0.86rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.cupcake-case .cupcake-reflection-column p {
+  max-width: 620px;
+  margin: 0;
+  color: #514c46;
+  font-size: clamp(1.02rem, 1.16vw, 1.12rem);
+  line-height: 1.65;
+}
+
+.cupcake-case .cupcake-validation-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 0.7rem;
+  align-items: baseline;
+  margin: 0;
+  padding-top: clamp(0.85rem, 1.6vw, 1.2rem);
+  border-top: 1px solid var(--case-line-soft);
+  color: #514c46;
+  font-size: clamp(0.98rem, 1.08vw, 1.06rem);
+  line-height: 1.5;
+}
+
+.cupcake-case .prototype-section {
+  margin-top: clamp(0.75rem, 2vw, 1.7rem);
+}
+
+@media (max-width: 900px) {
+  .cupcake-case .cupcake-reflection-open {
+    grid-template-columns: 1fr;
+    gap: 1.15rem;
+  }
+
+  .cupcake-case .cupcake-reflection-column + .cupcake-reflection-column {
+    padding-top: 1.15rem;
+    padding-left: 0;
+    border-top: 1px solid var(--case-line-soft);
+    border-left: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .cupcake-case .cupcake-supporting-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .cupcake-case .cupcake-supporting-preview .cupcake-supporting-image {
+    aspect-ratio: 4 / 5;
+  }
+}

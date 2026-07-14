@@ -14,6 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" href="assets/logo-wenshu.png" />
     <link rel="stylesheet" href="styles.css?v=20260711-restore3" />
   </head>
   <body class="cupcake-case">
@@ -40,10 +41,12 @@
         </div>
 
         <div class="case-hero-grid">
-          <div class="case-intro">
+          <div class="case-intro cupcake-hero-copy">
             <p class="case-label">Toronto Cupcake Redesign</p>
-            <h1 id="cupcake-title">Making cupcake ordering easier to browse, choose, and complete.</h1>
-            <p>A responsive e-commerce redesign focused on improving product discoverability, cart visibility, and checkout clarity for Toronto Cupcake's online ordering experience.</p>
+            <h1 id="cupcake-title">The sweetest part shouldn’t stop at the cupcake.</h1>
+            <p>Toronto Cupcake creates beautifully crafted products, but its ordering experience felt text-heavy and difficult to navigate.</p>
+            <p>I redesigned the journey to make browsing, choosing, and checking out feel clearer and more delightful.</p>
+            <p class="cupcake-design-question">How might ordering cupcakes feel as delightful as receiving them?</p>
             <a class="button primary prototype-cta" href="#prototype">View Interactive Prototype ↓</a>
           </div>
 
@@ -54,11 +57,11 @@
             </div>
             <div>
               <h2>Context</h2>
-              <p>Academic redesign project</p>
+              <p>Self-initiated redesign</p>
             </div>
             <div>
               <h2>Role</h2>
-              <p>UX / UI Designer</p>
+              <p>Solo UX/UI Designer</p>
             </div>
             <div>
               <h2>Focus</h2>
@@ -83,18 +86,18 @@
             <h2 id="overview-title">Turning a hard-to-follow ordering path into a clearer e-commerce flow.</h2>
           </div>
 
-          <div class="overview-grid cupcake-overview-grid">
-            <article>
-              <span>Problem</span>
-              <p>The original website made ordering harder than it needed to be. Key navigation was hidden, product paths were unclear, and checkout actions lacked strong hierarchy.</p>
+          <div class="overview-grid cupcake-overview-grid cupcake-overview-row">
+            <article class="cupcake-overview-item">
+              <span>Audience</span>
+              <p>Toronto and GTA customers ordering cupcakes for personal celebrations, gifts, and events.</p>
             </article>
-            <article>
-              <span>Design Direction</span>
-              <p>Make the shopping path visible from homepage to checkout.</p>
+            <article class="cupcake-overview-item">
+              <span>Challenge</span>
+              <p>Dense content and unclear shopping paths made the ordering process feel harder than necessary.</p>
             </article>
-            <article>
-              <span>Outcome</span>
-              <p>The redesign introduces clearer navigation, product filtering, persistent cart access, cart review, and a simplified checkout form.</p>
+            <article class="cupcake-overview-item">
+              <span>Goal</span>
+              <p>Create a clearer journey from product discovery to cart review and checkout.</p>
             </article>
           </div>
         </section>
@@ -103,138 +106,112 @@
           <div class="case-story-heading compact">
             <p class="eyebrow">Funnel Diagnosis</p>
             <h2 id="funnel-title">The largest drop-off happened before checkout.</h2>
-            <p class="research-source">I used the provided conversion funnel to identify where users were most likely to lose momentum in the ordering process.</p>
+            <p class="research-source">The largest drop occurred before checkout began, directing the audit toward cart visibility, review, and checkout entry.</p>
           </div>
 
-          <div class="funnel-strip" aria-label="Toronto Cupcake conversion funnel">
-            <article>
-              <span>Visit Landing Page → Product Page</span>
-              <strong>100% → 81.5%</strong>
-              <p>Drop-off: -18.5%</p>
-            </article>
-            <article>
-              <span>Product Page → Add to Cart</span>
-              <strong>81.5% → 70.3%</strong>
-              <p>Drop-off: -11.2%</p>
-            </article>
-            <article class="largest-dropoff">
-              <span>Add to Cart → Initiate Checkout</span>
-              <strong>70.3% → 27.6%</strong>
-              <p>Drop-off: -42.7%</p>
-              <em>Largest drop-off</em>
-            </article>
-            <article>
-              <span>Checkout → Complete Transaction</span>
-              <strong>27.6% → 25.2%</strong>
-              <p>Drop-off: -2.4%</p>
-            </article>
-          </div>
+          <div class="cupcake-funnel-pipeline" aria-label="Toronto Cupcake conversion funnel">
+            <ol class="cupcake-funnel-stages">
+              <li>
+                <span>Landing Page</span>
+                <strong>100%</strong>
+              </li>
+              <li>
+                <span>Product Page</span>
+                <strong>81.5%</strong>
+              </li>
+              <li>
+                <span>Add to Cart</span>
+                <strong>70.3%</strong>
+              </li>
+              <li>
+                <span>Initiate Checkout</span>
+                <strong>27.6%</strong>
+              </li>
+              <li>
+                <span>Purchase Complete</span>
+                <strong>25.2%</strong>
+              </li>
+            </ol>
 
-          <div class="synthesis-note cupcake-note">
-            <span>Funnel focus</span>
-            <p>The main issue was not final payment. The biggest friction appeared when users moved from adding items to initiating checkout, so I focused the redesign on product discovery, cart review, and checkout entry.</p>
+            <div class="cupcake-funnel-drops" aria-label="Drop-off between funnel stages">
+              <article class="cupcake-drop-step" style="--drop-size: 43">
+                <span>Visit → Product</span>
+                <div class="cupcake-drop-meter" aria-hidden="true"><i></i></div>
+                <strong>−18.5%</strong>
+              </article>
+              <article class="cupcake-drop-step" style="--drop-size: 26">
+                <span>Product → Cart</span>
+                <div class="cupcake-drop-meter" aria-hidden="true"><i></i></div>
+                <strong>−11.2%</strong>
+              </article>
+              <article class="cupcake-drop-step is-largest" style="--drop-size: 100">
+                <span>Add to Cart → Checkout</span>
+                <div class="cupcake-drop-meter" aria-hidden="true"><i></i></div>
+                <strong>−42.7%</strong>
+                <em>Largest drop-off</em>
+              </article>
+              <article class="cupcake-drop-step" style="--drop-size: 8">
+                <span>Checkout → Complete</span>
+                <div class="cupcake-drop-meter" aria-hidden="true"><i></i></div>
+                <strong>−2.4%</strong>
+              </article>
+            </div>
           </div>
         </section>
 
         <section class="case-section" aria-labelledby="audit-title">
           <div class="case-story-heading compact">
             <p class="eyebrow">Audit Findings</p>
-            <h2 id="audit-title">The audit revealed three friction points in the ordering path.</h2>
+            <h2 id="audit-title">Where the ordering experience lost its sweetness</h2>
+            <p class="research-source">Three interface patterns helped explain where the ordering path felt harder to follow.</p>
           </div>
 
-          <div class="audit-evidence-heading">
-            <p class="eyebrow">Annotated Original-Site Audit</p>
-            <p>Six annotated screens show how the original ordering path broke down across homepage entry, product browsing, cart review, and checkout.</p>
-          </div>
-
-          <div class="audit-evidence-strip cupcake-audit-stack" aria-label="Annotated Original-Site Audit grouped by finding">
-            <article class="cupcake-audit-block">
-              <div class="cupcake-audit-finding">
+          <div class="cupcake-audit-editorial" aria-label="Annotated audit evidence grouped by finding">
+            <article class="cupcake-audit-finding-block">
+              <div class="cupcake-audit-copy">
                 <p class="quote-label">Finding 01</p>
-                <h3>Product path was hard to find.</h3>
-                <p><strong>Evidence</strong> The original homepage relied on hidden navigation and weak ordering cues. Decorative elements looked clickable, while the actual ordering path was buried in text and unclear menu organization.</p>
-                <p><strong>Design implication</strong> Make navigation and “Order Now” visible at first glance.</p>
+                <h3>The starting point was difficult to identify</h3>
+                <p><strong>Evidence</strong> Hidden navigation and weak ordering cues made the primary shopping path easy to miss.</p>
+                <p><strong>Design Opportunity</strong> Make the first ordering action visible immediately.</p>
               </div>
 
-              <div class="cupcake-audit-evidence-list">
-                <article class="cupcake-audit-evidence-row">
-                  <div class="audit-evidence-image">
-                    <img src="assets/cupcake/cupcake-audit-homepage-overview.png" alt="Annotated audit screenshot of original Toronto Cupcake homepage issues" />
-                  </div>
-                  <div class="cupcake-audit-evidence-copy">
-                    <h4>Homepage overview</h4>
-                    <p>Hidden navigation, weak CTA visibility, clickable-looking decorative logos, and links buried in paragraphs made the ordering path hard to find.</p>
-                  </div>
-                </article>
-                <article class="cupcake-audit-evidence-row">
-                  <div class="audit-evidence-image">
-                    <img src="assets/cupcake/cupcake-audit-side-navigation.png" alt="Annotated audit screenshot of original Toronto Cupcake side navigation issues" />
-                  </div>
-                  <div class="cupcake-audit-evidence-copy">
-                    <h4>Side navigation</h4>
-                    <p>The expanded menu did not clearly label ordering, and product categories were not organized around user shopping needs.</p>
-                  </div>
-                </article>
+              <div class="cupcake-audit-visuals">
+                <button class="cupcake-audit-visual-link cupcake-image-zoom-trigger is-dominant" type="button" data-zoom-src="assets/cupcake/cupcake-audit-homepage-overview.png" data-zoom-alt="Annotated audit screenshot showing hidden navigation, weak order cues, decorative logos, and buried ordering links on the original Toronto Cupcake homepage" aria-label="Expand annotated homepage overview audit image">
+                  <img src="assets/cupcake/cupcake-audit-homepage-overview.png" alt="Annotated audit screenshot showing hidden navigation, weak order cues, decorative logos, and buried ordering links on the original Toronto Cupcake homepage" loading="lazy" />
+                </button>
               </div>
             </article>
 
-            <article class="cupcake-audit-block">
-              <div class="cupcake-audit-finding">
+            <article class="cupcake-audit-finding-block">
+              <div class="cupcake-audit-copy">
                 <p class="quote-label">Finding 02</p>
-                <h3>Product browsing lacked shopping feedback.</h3>
-                <p><strong>Evidence</strong> The product page lacked filtering, persistent cart access, visible pricing, and clear product details, making it harder for users to compare options and track selections.</p>
-                <p><strong>Design implication</strong> Support browsing with filters, clearer product cards, visible prices, and persistent cart access.</p>
+                <h3>Browsing offered limited comparison support</h3>
+                <p><strong>Evidence</strong> Product information, prices, filtering, and cart access were difficult to review in one place.</p>
+                <p><strong>Design Opportunity</strong> Help customers narrow choices and track selections.</p>
               </div>
 
-              <div class="cupcake-audit-evidence-list">
-                <article class="cupcake-audit-evidence-row">
-                  <div class="audit-evidence-image">
-                    <img src="assets/cupcake/cupcake-audit-product-page.png" alt="Annotated audit screenshot of original Toronto Cupcake product browsing issues" />
-                  </div>
-                  <div class="cupcake-audit-evidence-copy">
-                    <h4>Product browsing</h4>
-                    <p>Products lacked filters, visible prices, persistent cart access, and clear details such as ingredients or allergens.</p>
-                  </div>
-                </article>
+              <div class="cupcake-audit-visuals">
+                <button class="cupcake-audit-visual-link cupcake-image-zoom-trigger is-dominant" type="button" data-zoom-src="assets/cupcake/cupcake-audit-product-page.png" data-zoom-alt="Annotated audit screenshot showing limited filtering, unclear pricing, missing persistent cart access, and product detail issues on the original product page" aria-label="Expand annotated product browsing audit image">
+                  <img src="assets/cupcake/cupcake-audit-product-page.png" alt="Annotated audit screenshot showing limited filtering, unclear pricing, missing persistent cart access, and product detail issues on the original product page" loading="lazy" />
+                </button>
               </div>
             </article>
 
-            <article class="cupcake-audit-block">
-              <div class="cupcake-audit-finding">
+            <article class="cupcake-audit-finding-block">
+              <div class="cupcake-audit-copy">
                 <p class="quote-label">Finding 03</p>
-                <h3>Cart-to-checkout transition was unclear.</h3>
-                <p><strong>Evidence</strong> Cart and checkout screens had weak action hierarchy, repeated information fields, unclear page progression, and limited backtracking options.</p>
-                <p><strong>Design implication</strong> Simplify the cart-to-checkout flow, clarify progress, and reduce repeated form entry.</p>
+                <h3>Cart and checkout lacked continuity</h3>
+                <p><strong>Evidence</strong> Weak hierarchy, repeated fields, and fragmented steps made the transition into checkout harder to follow.</p>
+                <p><strong>Design Opportunity</strong> Create a clearer path from cart review to checkout.</p>
               </div>
 
-              <div class="cupcake-audit-evidence-list">
-                <article class="cupcake-audit-evidence-row">
-                  <div class="audit-evidence-image">
-                    <img src="assets/cupcake/cupcake-audit-cart-overview.png" alt="Annotated audit screenshot of original Toronto Cupcake cart review issues" />
-                  </div>
-                  <div class="cupcake-audit-evidence-copy">
-                    <h4>Cart review</h4>
-                    <p>Checkout actions were visually weak and poorly positioned, while secondary cart actions created hierarchy problems.</p>
-                  </div>
-                </article>
-                <article class="cupcake-audit-evidence-row">
-                  <div class="audit-evidence-image">
-                    <img src="assets/cupcake/cupcake-audit-processing-page.png" alt="Annotated audit screenshot of original Toronto Cupcake processing page issues" />
-                  </div>
-                  <div class="cupcake-audit-evidence-copy">
-                    <h4>Processing page</h4>
-                    <p>The order processing step added another page without clear back navigation, making the checkout flow feel fragmented.</p>
-                  </div>
-                </article>
-                <article class="cupcake-audit-evidence-row">
-                  <div class="audit-evidence-image">
-                    <img src="assets/cupcake/cupcake-audit-delivery-form.png" alt="Annotated audit screenshot of original Toronto Cupcake delivery form issues" />
-                  </div>
-                  <div class="cupcake-audit-evidence-copy">
-                    <h4>Delivery form</h4>
-                    <p>Sender and recipient fields repeated information, and the form structure made checkout feel longer than necessary.</p>
-                  </div>
-                </article>
+              <div class="cupcake-audit-visuals two-up">
+                <button class="cupcake-audit-visual-link cupcake-image-zoom-trigger is-dominant" type="button" data-zoom-src="assets/cupcake/cupcake-audit-cart-overview.png" data-zoom-alt="Annotated audit screenshot showing weak checkout action hierarchy and fragmented cart review structure" aria-label="Expand annotated cart review audit image">
+                  <img src="assets/cupcake/cupcake-audit-cart-overview.png" alt="Annotated audit screenshot showing weak checkout action hierarchy and fragmented cart review structure" loading="lazy" />
+                </button>
+                <button class="cupcake-audit-visual-link cupcake-image-zoom-trigger" type="button" data-zoom-src="assets/cupcake/cupcake-audit-delivery-form.png" data-zoom-alt="Annotated audit screenshot showing repeated sender and recipient fields and confusing delivery form structure" aria-label="Expand annotated delivery form audit image">
+                  <img src="assets/cupcake/cupcake-audit-delivery-form.png" alt="Annotated audit screenshot showing repeated sender and recipient fields and confusing delivery form structure" loading="lazy" />
+                </button>
               </div>
             </article>
           </div>
@@ -243,43 +220,56 @@
         <section class="case-section" aria-labelledby="strategy-title">
           <div class="case-story-heading compact">
             <p class="eyebrow">Redesign Strategy</p>
-            <h2 id="strategy-title">I focused on the moments where users needed clearer direction and control.</h2>
-            <p class="research-source">Instead of redesigning every page equally, I prioritized the points that shaped whether users could find products, review selections, and move into checkout.</p>
+            <h2 id="strategy-title">From evidence to a clearer purchase journey</h2>
+            <p class="research-source">I translated the audit findings into three design principles, then tested hierarchy and flow through low-fidelity wireframes.</p>
           </div>
 
-          <div class="strategy-chip-grid">
-            <article>Make ordering paths visible</article>
-            <article>Surface product details and prices earlier</article>
-            <article>Keep cart access persistent</article>
-            <article>Simplify cart-to-checkout transition</article>
+          <div class="cupcake-principle-list" aria-label="Toronto Cupcake redesign principles">
+            <article>
+              <span>01</span>
+              <h3>Make the next action obvious</h3>
+              <p>Users should immediately understand how to start or continue ordering.</p>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>Reduce decision effort</h3>
+              <p>Products should be easier to narrow, compare, and review.</p>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>Preserve confidence</h3>
+              <p>Cart and checkout should keep price, progress, and next steps visible.</p>
+            </article>
           </div>
 
-          <div class="process-snapshot">
-            <div class="process-snapshot-copy">
-              <span>From audit to structure</span>
-              <p>I used low-fidelity wireframes to reorganize the ordering flow before applying the final visual design.</p>
+          <div class="cupcake-wireframe-study">
+            <div class="cupcake-wireframe-copy">
+              <h3>Exploring the structure before the visual system</h3>
+              <p>The wireframes focused on entry points, product comparison, cart review, and checkout progression before visual styling.</p>
             </div>
-            <div class="process-steps" aria-label="Redesign process">
-              <span>Audit findings</span>
-              <b aria-hidden="true">→</b>
-              <span>Low-fi wireframes</span>
-              <b aria-hidden="true">→</b>
-              <span>Final UI</span>
-            </div>
-            <div class="process-image-frame">
-              <img src="assets/cupcake/cupcake-wireframes.png" alt="Low-fidelity wireframes for the Toronto Cupcake redesign" />
-            </div>
+            <button class="cupcake-wireframe-link cupcake-image-zoom-trigger" type="button" data-zoom-src="assets/cupcake/cupcake-wireframes.png" data-zoom-alt="Low-fidelity wireframes for the Toronto Cupcake redesign showing homepage, menu, events, about, FAQs, cart, and checkout structures" aria-label="Expand low-fidelity wireframes for the Toronto Cupcake redesign">
+              <img src="assets/cupcake/cupcake-wireframes.png" alt="Low-fidelity wireframes for the Toronto Cupcake redesign showing homepage, menu, events, about, FAQs, cart, and checkout structures" loading="lazy" />
+            </button>
           </div>
         </section>
 
         <section class="case-section design-highlights cupcake-improvements" aria-labelledby="improvements-title">
-          <div class="case-story-heading">
+          <div class="case-story-heading compact">
             <p class="eyebrow">Key Improvements</p>
-            <h2 id="improvements-title">Four changes made the ordering flow easier to follow.</h2>
+            <h2 id="improvements-title">Designing a sweeter ordering journey</h2>
+            <p class="research-source">Each decision addressed a moment where customers needed clearer direction, easier comparison, or greater confidence.</p>
           </div>
 
-          <div class="feature-showcase">
-            <article class="feature-card">
+          <div class="feature-showcase cupcake-decision-showcase">
+            <article class="feature-card cupcake-decision-card">
+              <div class="cupcake-decision-intro">
+                <p class="cupcake-decision-label">Decision 01</p>
+                <h3>Help customers start ordering sooner</h3>
+                <div class="cupcake-decision-section cupcake-decision-challenge">
+                  <span>Challenge</span>
+                  <p>The original homepage did not provide a clear starting point for shopping.</p>
+                </div>
+              </div>
               <div class="feature-visual cupcake-screen-visual">
                 <div class="browser-screen-frame">
                   <div class="browser-bar-mini" aria-hidden="true">
@@ -288,13 +278,31 @@
                   <img class="cupcake-feature-screen" src="assets/cupcake/cupcake-home.png" alt="Toronto Cupcake redesigned homepage screen" />
                 </div>
               </div>
-              <div class="feature-copy">
-                <h3>Clearer Homepage Ordering Path</h3>
-                <p>The homepage now gives users a direct “Order Now” path, occasion-based shortcuts, best sellers, and a simple “How It Works” section.</p>
+              <div class="cupcake-decision-details">
+                <div class="cupcake-decision-section">
+                  <span>Design Response</span>
+                  <ul>
+                    <li>Visible primary navigation</li>
+                    <li>A prominent Order Now action</li>
+                    <li>Occasion shortcuts and best sellers</li>
+                  </ul>
+                </div>
+                <div class="cupcake-decision-section">
+                  <span>Why It Matters</span>
+                  <p>Making the first action obvious reduces hesitation at the beginning of the journey.</p>
+                </div>
               </div>
             </article>
 
-            <article class="feature-card reverse">
+            <article class="feature-card cupcake-decision-card reverse">
+              <div class="cupcake-decision-intro">
+                <p class="cupcake-decision-label">Decision 02</p>
+                <h3>Make choosing feel more manageable</h3>
+                <div class="cupcake-decision-section cupcake-decision-challenge">
+                  <span>Challenge</span>
+                  <p>An unstructured product list made it difficult to narrow and compare options.</p>
+                </div>
+              </div>
               <div class="feature-visual cupcake-screen-visual">
                 <div class="browser-screen-frame">
                   <div class="browser-bar-mini" aria-hidden="true">
@@ -303,13 +311,31 @@
                   <img class="cupcake-feature-screen" src="assets/cupcake/cupcake-menu.png" alt="Toronto Cupcake redesigned menu browsing screen with filters" />
                 </div>
               </div>
-              <div class="feature-copy">
-                <h3>Product Browsing with Filters</h3>
-                <p>The menu page adds keyword search, sorting, and filters for flavour, type, price, and occasion, helping users narrow choices without scrolling through an unstructured list.</p>
+              <div class="cupcake-decision-details">
+                <div class="cupcake-decision-section">
+                  <span>Design Response</span>
+                  <ul>
+                    <li>Keyword search</li>
+                    <li>Sorting and filters</li>
+                    <li>Visible prices and product details</li>
+                  </ul>
+                </div>
+                <div class="cupcake-decision-section">
+                  <span>Why It Matters</span>
+                  <p>Structured browsing reduces the effort required to reach a decision.</p>
+                </div>
               </div>
             </article>
 
-            <article class="feature-card">
+            <article class="feature-card cupcake-decision-card">
+              <div class="cupcake-decision-intro">
+                <p class="cupcake-decision-label">Decision 03</p>
+                <h3>Build confidence before checkout</h3>
+                <div class="cupcake-decision-section cupcake-decision-challenge">
+                  <span>Challenge</span>
+                  <p>Customers had limited visibility and control over their selections before continuing.</p>
+                </div>
+              </div>
               <div class="feature-visual cupcake-screen-visual">
                 <div class="browser-screen-frame">
                   <div class="browser-bar-mini" aria-hidden="true">
@@ -318,13 +344,31 @@
                   <img class="cupcake-feature-screen" src="assets/cupcake/cupcake-cart.png" alt="Toronto Cupcake redesigned cart review screen" />
                 </div>
               </div>
-              <div class="feature-copy">
-                <h3>Cart Review Before Checkout</h3>
-                <p>The cart page gives users a clear review step with item quantities, order summary, checkout CTA, continue shopping link, and a free-delivery progress reminder.</p>
+              <div class="cupcake-decision-details">
+                <div class="cupcake-decision-section">
+                  <span>Design Response</span>
+                  <ul>
+                    <li>Editable quantities</li>
+                    <li>Persistent order summary</li>
+                    <li>Clear checkout hierarchy</li>
+                  </ul>
+                </div>
+                <div class="cupcake-decision-section">
+                  <span>Why It Matters</span>
+                  <p>A transparent review step helps customers continue with fewer doubts.</p>
+                </div>
               </div>
             </article>
 
-            <article class="feature-card reverse">
+            <article class="feature-card cupcake-decision-card reverse">
+              <div class="cupcake-decision-intro">
+                <p class="cupcake-decision-label">Decision 04</p>
+                <h3>Keep momentum through checkout</h3>
+                <div class="cupcake-decision-section cupcake-decision-challenge">
+                  <span>Challenge</span>
+                  <p>Repeated fields and fragmented steps made checkout feel longer than necessary.</p>
+                </div>
+              </div>
               <div class="feature-visual cupcake-screen-visual">
                 <div class="browser-screen-frame">
                   <div class="browser-bar-mini" aria-hidden="true">
@@ -333,33 +377,82 @@
                   <img class="cupcake-feature-screen" src="assets/cupcake/cupcake-checkout.png" alt="Toronto Cupcake redesigned checkout delivery form screen" />
                 </div>
               </div>
-              <div class="feature-copy">
-                <h3>Simplified Checkout Form</h3>
-                <p>The checkout page groups delivery, sender, recipient, and special instructions into clear sections, with a progress stepper and a same-as-sender checkbox to reduce repeated entry.</p>
+              <div class="cupcake-decision-details">
+                <div class="cupcake-decision-section">
+                  <span>Design Response</span>
+                  <ul>
+                    <li>Progress indicator</li>
+                    <li>Grouped form sections</li>
+                    <li>Same-as-sender option</li>
+                  </ul>
+                </div>
+                <div class="cupcake-decision-section">
+                  <span>Why It Matters</span>
+                  <p>Breaking the task into clear sections reduces cognitive load and repeated entry.</p>
+                </div>
               </div>
             </article>
           </div>
         </section>
 
-        <section class="case-section reflection-section" aria-labelledby="reflection-title">
+        <section class="case-section cupcake-supporting-experience" aria-labelledby="supporting-title">
+          <div class="case-story-heading compact">
+            <p class="eyebrow">Supporting Experience</p>
+            <h2 id="supporting-title">Extending the experience beyond checkout</h2>
+            <p class="research-source">The same visual system was extended across event planning, brand storytelling, and customer support to create a more consistent website experience.</p>
+          </div>
+
+          <div class="cupcake-supporting-layout" aria-label="Toronto Cupcake supporting page screens">
+            <figure class="cupcake-supporting-preview is-events">
+              <button class="cupcake-supporting-image cupcake-image-zoom-trigger" type="button" data-zoom-src="assets/cupcake/cupcake-events.png" data-zoom-alt="Toronto Cupcake redesigned Events page showing event categories, testimonials, and custom order contact path" aria-label="Expand Toronto Cupcake Events page screenshot">
+                <img src="assets/cupcake/cupcake-events.png" alt="Toronto Cupcake redesigned Events page preview" loading="lazy" />
+              </button>
+              <figcaption>
+                <span>Events</span>
+                <p>Supporting celebration, corporate, and custom-order discovery.</p>
+              </figcaption>
+            </figure>
+
+            <figure class="cupcake-supporting-preview is-about">
+              <button class="cupcake-supporting-image cupcake-image-zoom-trigger" type="button" data-zoom-src="assets/cupcake/cupcake-about.png" data-zoom-alt="Toronto Cupcake redesigned About page showing brand story, delivery values, quick facts, and service strengths" aria-label="Expand Toronto Cupcake About page screenshot">
+                <img src="assets/cupcake/cupcake-about.png" alt="Toronto Cupcake redesigned About page preview" loading="lazy" />
+              </button>
+              <figcaption>
+                <span>About</span>
+                <p>Building trust through the brand story and service values.</p>
+              </figcaption>
+            </figure>
+
+            <figure class="cupcake-supporting-preview is-faqs">
+              <button class="cupcake-supporting-image cupcake-image-zoom-trigger" type="button" data-zoom-src="assets/cupcake/cupcake-faqs.png" data-zoom-alt="Toronto Cupcake redesigned FAQs page showing contact information, hours, ordering, delivery, ingredients, and event questions" aria-label="Expand Toronto Cupcake FAQs page screenshot">
+                <img src="assets/cupcake/cupcake-faqs.png" alt="Toronto Cupcake redesigned FAQs page preview" loading="lazy" />
+              </button>
+              <figcaption>
+                <span>FAQs</span>
+                <p>Reducing uncertainty around ordering, delivery, and ingredients.</p>
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="case-section reflection-section cupcake-reflection-section" aria-labelledby="reflection-title">
           <div class="case-story-heading compact">
             <p class="eyebrow">Reflection</p>
             <h2 id="reflection-title">What this redesign taught me about commerce UX.</h2>
           </div>
-          <div class="cupcake-reflection-grid">
-            <article>
-              <h3>What I learned</h3>
-              <p>This project taught me that e-commerce UX is often less about adding new features and more about removing uncertainty. A small missing cue, like an unclear cart entry or weak checkout CTA, can make the whole ordering path feel unreliable.</p>
-            </article>
-            <article>
-              <h3>What I would improve</h3>
-              <p>My redesign focused strongly on structure and clarity, but I would still want to test whether users actually understand the new cart and checkout flow faster. The next step should be task-based usability testing, not more visual polish.</p>
-            </article>
-            <article>
-              <h3>What I would do differently</h3>
-              <p>I would spend more time separating business content from shopping actions. The original site had useful information, but it was buried inside long text and unclear navigation. A stronger IA system would help users decide whether they are browsing cupcakes, ordering for an event, or looking for delivery details.</p>
-            </article>
+
+          <div class="cupcake-reflection-open">
+            <div class="cupcake-reflection-column">
+              <span>What changed in my thinking</span>
+              <p>I began by treating the project as a visual cleanup, but the funnel analysis shifted my focus toward uncertainty across the purchase journey. The redesign became less about modernizing individual pages and more about helping customers understand what to do next.</p>
+            </div>
+            <div class="cupcake-reflection-column">
+              <span>What remains unproven</span>
+              <p>The concept still needs task-based usability testing and post-launch funnel comparison before its effect on ordering confidence or completion can be confirmed.</p>
+            </div>
           </div>
+
+          <p class="cupcake-validation-line"><span>Next to validate</span> Ordering-entry success · Product-finding time · Checkout completion</p>
         </section>
 
         <section class="case-section prototype-section" id="prototype" aria-labelledby="prototype-title">
@@ -381,6 +474,14 @@
             Open Figma Prototype ↗
           </a>
         </section>
+
+        <dialog class="cupcake-image-dialog" aria-labelledby="cupcake-image-dialog-title">
+          <div class="cupcake-image-dialog-inner">
+            <h2 class="cupcake-image-dialog-title" id="cupcake-image-dialog-title">Expanded Toronto Cupcake image</h2>
+            <button class="cupcake-image-dialog-close" type="button" aria-label="Close expanded image">×</button>
+            <img class="cupcake-image-dialog-image" alt="" />
+          </div>
+        </dialog>
       </section>
 
       <section class="contact" id="contact" aria-labelledby="contact-title">
