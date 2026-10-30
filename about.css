@@ -1,12 +1,12 @@
 /* Production About page styles. Loaded after the shared site stylesheet. */
 
-.about-page {
+.about-profile-page {
   --about-rose: #a8758c;
   --about-paper: #f8f4ee;
   --about-rule: rgba(36, 33, 31, 0.27);
 }
 
-.about-page .about-hero {
+.about-profile-page .about-hero {
   grid-template-columns: minmax(0, 3fr) minmax(340px, 2fr);
   gap: clamp(2.5rem, 5vw, 5rem);
   min-height: min(720px, calc(100svh - 78px));
@@ -14,45 +14,45 @@
   padding-block: clamp(2.4rem, 5vh, 3.5rem);
 }
 
-.about-page .about-hero-copy {
+.about-profile-page .about-hero-copy {
   max-width: 720px;
 }
 
-.about-page .about-hero-copy h1 {
+.about-profile-page .about-hero-copy h1 {
   max-width: 700px;
   margin-bottom: clamp(1.25rem, 2vh, 1.65rem);
   font-size: clamp(2.5rem, 3.6vw, 3.8rem);
   line-height: 1.01;
 }
 
-.about-page .about-intro-copy {
+.about-profile-page .about-intro-copy {
   display: grid;
   gap: clamp(0.58rem, 1.1vh, 0.78rem);
   max-width: 650px;
 }
 
-.about-page .about-intro-copy p {
+.about-profile-page .about-intro-copy p {
   margin: 0;
   color: #514c46;
   font-size: clamp(1.05rem, 1.18vw, 1.18rem);
   line-height: 1.68;
 }
 
-.about-page .about-current {
+.about-profile-page .about-current {
   padding-top: 0.35rem;
 }
 
-.about-page .about-current strong {
+.about-profile-page .about-current strong {
   color: var(--ink);
   font-weight: 800;
 }
 
-.about-page .hero-actions {
+.about-profile-page .hero-actions {
   margin-top: clamp(1.25rem, 2.2vh, 1.65rem);
 }
 
 /* The original machine, timing, and picked-state class remain intact. */
-.about-page .about-hero .print-strip {
+.about-profile-page .about-hero .print-strip {
   --print-strip-photo-width: clamp(88px, 7.2vw, 102px);
   width: min(100%, 382px);
   min-height: 0;
@@ -61,45 +61,45 @@
   padding: 24px 24px 26px;
 }
 
-.about-page .about-hero .print-strip::before {
+.about-profile-page .about-hero .print-strip::before {
   inset: 0 18px 14px;
 }
 
-.about-page .about-hero .print-strip-plate {
+.about-profile-page .about-hero .print-strip-plate {
   width: 198px;
   padding: 15px 13px 10px;
 }
 
-.about-page .about-hero .plate-text {
+.about-profile-page .about-hero .plate-text {
   font-size: 13px;
 }
 
-.about-page .about-hero .print-strip-machine {
+.about-profile-page .about-hero .print-strip-machine {
   width: min(100%, 220px);
   padding-bottom: 12px;
 }
 
-.about-page .about-hero .print-strip-machine::before {
+.about-profile-page .about-hero .print-strip-machine::before {
   width: min(100%, 198px);
 }
 
-.about-page .about-hero .print-strip-slot {
+.about-profile-page .about-hero .print-strip-slot {
   width: 182px;
 }
 
-.about-page .about-hero .print-strip-slot span {
+.about-profile-page .about-hero .print-strip-slot span {
   width: 146px;
 }
 
-.about-page .about-hero .print-strip-window {
+.about-profile-page .about-hero .print-strip-window {
   height: calc(var(--print-strip-photo-width) * 3.9043);
 }
 
-.about-page .about-hero .print-strip-button {
+.about-profile-page .about-hero .print-strip-button {
   margin-top: 2px;
 }
 
-.about-page .about-hero .print-strip-picked {
+.about-profile-page .about-hero .print-strip-picked {
   width: min(100%, 236px);
   margin: 2px 0 14px;
   transform: rotate(-1.25deg);
@@ -107,11 +107,11 @@
 }
 
 /* Once collected, the receipt replaces the instruction plate in the same footprint. */
-.about-page .about-hero .print-strip.is-picked .print-strip-plate {
+.about-profile-page .about-hero .print-strip.is-picked .print-strip-plate {
   display: none;
 }
 
-.about-page .about-hero .print-strip.is-picked .print-strip-picked {
+.about-profile-page .about-hero .print-strip.is-picked .print-strip-picked {
   margin-block: -20px -8px;
   transform: rotate(-1.25deg) scale(0.86);
   transform-origin: center;
@@ -456,42 +456,42 @@
 }
 
 @media (max-width: 900px) {
-  .about-page .about-hero {
+  .about-profile-page .about-hero {
     grid-template-columns: 1fr;
     min-height: 0;
     gap: 3.5rem;
   }
 
-  .about-page .about-hero-copy {
+  .about-profile-page .about-hero-copy {
     max-width: 720px;
   }
 
-  .about-page .about-hero .print-strip {
+  .about-profile-page .about-hero .print-strip {
     justify-self: center;
   }
 
 }
 
 @media (min-width: 901px) and (max-height: 820px) {
-  .about-page .about-hero {
+  .about-profile-page .about-hero {
     gap: clamp(2rem, 4vw, 4rem);
     padding-block: 2rem;
   }
 
-  .about-page .about-hero-copy h1 {
+  .about-profile-page .about-hero-copy h1 {
     margin-bottom: 1.15rem;
     font-size: clamp(2.5rem, 3.35vw, 3.35rem);
   }
 
-  .about-page .about-intro-copy {
+  .about-profile-page .about-intro-copy {
     gap: 0.52rem;
   }
 
-  .about-page .hero-actions {
+  .about-profile-page .hero-actions {
     margin-top: 1.15rem;
   }
 
-  .about-page .about-hero .print-strip {
+  .about-profile-page .about-hero .print-strip {
     --print-strip-photo-width: 88px;
     width: min(100%, 360px);
     padding-block: 20px 22px;
@@ -499,16 +499,16 @@
 }
 
 @media (max-width: 620px) {
-  .about-page .site-header {
+  .about-profile-page .site-header {
     gap: 0.55rem;
     padding-inline: 0.75rem;
   }
 
-  .about-page .brand {
+  .about-profile-page .brand {
     gap: 0;
   }
 
-  .about-page .brand > span:last-child {
+  .about-profile-page .brand > span:last-child {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -517,44 +517,44 @@
     white-space: nowrap;
   }
 
-  .about-page .brand-mark {
+  .about-profile-page .brand-mark {
     width: 42px;
     height: 42px;
     flex-basis: 42px;
   }
 
-  .about-page .site-header nav {
+  .about-profile-page .site-header nav {
     gap: 0.12rem;
   }
 
-  .about-page .site-header nav a {
+  .about-profile-page .site-header nav a {
     padding: 0.48rem 0.52rem;
     font-size: 0.84rem;
   }
 
-  .about-page .about-hero {
+  .about-profile-page .about-hero {
     padding-top: 3.2rem;
   }
 
-  .about-page .about-hero-copy h1 {
+  .about-profile-page .about-hero-copy h1 {
     font-size: clamp(2.45rem, 11vw, 3.55rem);
   }
 
-  .about-page .about-hero .print-strip {
+  .about-profile-page .about-hero .print-strip {
     --print-strip-photo-width: clamp(104px, 34vw, 120px);
     width: min(100%, 360px);
     padding: 28px 20px 30px;
   }
 
-  .about-page .about-hero .print-strip-picked {
+  .about-profile-page .about-hero .print-strip-picked {
     width: min(100%, 222px);
   }
 
-  .about-page .about-hero .print-strip.is-picked {
+  .about-profile-page .about-hero .print-strip.is-picked {
     min-height: 696px;
   }
 
-  .about-page .about-hero .print-strip.is-picked .print-strip-picked {
+  .about-profile-page .about-hero .print-strip.is-picked .print-strip-picked {
     margin: 2px 0 14px;
     transform: rotate(-1.25deg) scale(0.86);
     transform-origin: center;
