@@ -1,0 +1,622 @@
+/* Production About page styles. Loaded after the shared site stylesheet. */
+
+.about-page {
+  --about-rose: #a8758c;
+  --about-paper: #f8f4ee;
+  --about-rule: rgba(36, 33, 31, 0.27);
+}
+
+.about-page .about-hero {
+  grid-template-columns: minmax(0, 3fr) minmax(340px, 2fr);
+  gap: clamp(2.5rem, 5vw, 5rem);
+  min-height: min(720px, calc(100svh - 78px));
+  overflow-anchor: none;
+  padding-block: clamp(2.4rem, 5vh, 3.5rem);
+}
+
+.about-page .about-hero-copy {
+  max-width: 720px;
+}
+
+.about-page .about-hero-copy h1 {
+  max-width: 700px;
+  margin-bottom: clamp(1.25rem, 2vh, 1.65rem);
+  font-size: clamp(2.5rem, 3.6vw, 3.8rem);
+  line-height: 1.01;
+}
+
+.about-page .about-intro-copy {
+  display: grid;
+  gap: clamp(0.58rem, 1.1vh, 0.78rem);
+  max-width: 650px;
+}
+
+.about-page .about-intro-copy p {
+  margin: 0;
+  color: #514c46;
+  font-size: clamp(1.05rem, 1.18vw, 1.18rem);
+  line-height: 1.68;
+}
+
+.about-page .about-current {
+  padding-top: 0.35rem;
+}
+
+.about-page .about-current strong {
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.about-page .hero-actions {
+  margin-top: clamp(1.25rem, 2.2vh, 1.65rem);
+}
+
+/* The original machine, timing, and picked-state class remain intact. */
+.about-page .about-hero .print-strip {
+  --print-strip-photo-width: clamp(88px, 7.2vw, 102px);
+  width: min(100%, 382px);
+  min-height: 0;
+  justify-content: flex-start;
+  gap: 10px;
+  padding: 24px 24px 26px;
+}
+
+.about-page .about-hero .print-strip::before {
+  inset: 0 18px 14px;
+}
+
+.about-page .about-hero .print-strip-plate {
+  width: 198px;
+  padding: 15px 13px 10px;
+}
+
+.about-page .about-hero .plate-text {
+  font-size: 13px;
+}
+
+.about-page .about-hero .print-strip-machine {
+  width: min(100%, 220px);
+  padding-bottom: 12px;
+}
+
+.about-page .about-hero .print-strip-machine::before {
+  width: min(100%, 198px);
+}
+
+.about-page .about-hero .print-strip-slot {
+  width: 182px;
+}
+
+.about-page .about-hero .print-strip-slot span {
+  width: 146px;
+}
+
+.about-page .about-hero .print-strip-window {
+  height: calc(var(--print-strip-photo-width) * 3.9043);
+}
+
+.about-page .about-hero .print-strip-button {
+  margin-top: 2px;
+}
+
+.about-page .about-hero .print-strip-picked {
+  width: min(100%, 236px);
+  margin: 2px 0 14px;
+  transform: rotate(-1.25deg);
+  transform-origin: 50% 12%;
+}
+
+/* Once collected, the receipt replaces the instruction plate in the same footprint. */
+.about-page .about-hero .print-strip.is-picked .print-strip-plate {
+  display: none;
+}
+
+.about-page .about-hero .print-strip.is-picked .print-strip-picked {
+  margin-block: -20px -8px;
+  transform: rotate(-1.25deg) scale(0.86);
+  transform-origin: center;
+}
+
+.about-receipt {
+  position: relative;
+  width: 100%;
+  padding: 25px 18px 23px;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.13), rgba(255, 255, 255, 0.13)),
+    var(--about-paper);
+  border: 1px solid rgba(56, 50, 47, 0.18);
+  box-shadow: 0 18px 38px rgba(36, 33, 31, 0.14);
+  color: #373230;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+.about-receipt::before {
+  content: "";
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  z-index: 2;
+  width: 74px;
+  height: 28px;
+  background: rgba(247, 217, 109, 0.85);
+  border: 1px solid rgba(36, 33, 31, 0.35);
+  transform: translateX(-50%) rotate(2deg);
+}
+
+.about-receipt::after {
+  content: "";
+  position: absolute;
+  left: -1px;
+  right: -1px;
+  bottom: -9px;
+  height: 10px;
+  background:
+    linear-gradient(135deg, transparent 50%, var(--about-paper) 51%) 0 0 / 14px 10px repeat-x,
+    linear-gradient(225deg, transparent 50%, var(--about-paper) 51%) 7px 0 / 14px 10px repeat-x;
+}
+
+.receipt-header {
+  padding-bottom: 17px;
+  text-align: center;
+}
+
+.receipt-star {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--about-rose);
+  font-size: 1.65rem;
+  line-height: 1;
+}
+
+.receipt-header h2 {
+  margin: 0 0 8px;
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.receipt-header p,
+.receipt-footer p {
+  margin: 0;
+  color: #847b76;
+  font-size: 0.62rem;
+  line-height: 1.45;
+  letter-spacing: 0.06em;
+}
+
+.receipt-list {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+  padding: 18px 0;
+  border-top: 1px solid var(--about-rule);
+  border-bottom: 1px solid var(--about-rule);
+}
+
+.receipt-list div {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: 10px;
+  align-items: baseline;
+}
+
+.receipt-list dt,
+.receipt-list dd {
+  margin: 0;
+  font-size: 0.66rem;
+  line-height: 1.35;
+}
+
+.receipt-list dt {
+  color: #69615c;
+}
+
+.receipt-list dd {
+  color: #332e2b;
+  text-align: right;
+}
+
+.receipt-info dt {
+  font-weight: 500;
+}
+
+.receipt-info dd {
+  font-weight: 500;
+}
+
+.receipt-ingredients {
+  padding-top: 18px;
+}
+
+.receipt-ingredients h3 {
+  margin: 0 0 13px;
+  font-size: 0.67rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.receipt-ingredients .receipt-list {
+  padding: 0 0 18px;
+  border-top: 0;
+}
+
+.receipt-footer {
+  padding-top: 16px;
+  text-align: center;
+}
+
+.receipt-barcode {
+  width: 74%;
+  height: 28px;
+  margin: 0 auto 13px;
+  background: repeating-linear-gradient(
+    90deg,
+    #3a3532 0 2px,
+    transparent 2px 4px,
+    #3a3532 4px 5px,
+    transparent 5px 8px,
+    #3a3532 8px 11px,
+    transparent 11px 13px
+  );
+}
+
+.receipt-footer em {
+  display: block;
+  margin-top: 7px;
+  color: var(--about-rose);
+  font-size: 0.72rem;
+}
+
+/* Minimal editorial Q&A beneath the approved interactive hero. */
+.about-qa {
+  padding-block: clamp(3.75rem, 7vw, 6.25rem);
+  border-top: 1px solid rgba(36, 33, 31, 0.1);
+}
+
+.about-qa-heading {
+  max-width: 680px;
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+.about-qa-heading h2 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(2.35rem, 4vw, 3.85rem);
+  line-height: 1;
+  letter-spacing: -0.035em;
+}
+
+.about-qa-heading p {
+  margin: 0;
+  color: var(--muted);
+  font-size: clamp(1rem, 1.15vw, 1.1rem);
+  line-height: 1.6;
+}
+
+.about-qa-list {
+  max-width: 980px;
+  border-top: 1px solid rgba(36, 33, 31, 0.2);
+}
+
+.about-qa-item {
+  border-bottom: 1px solid rgba(36, 33, 31, 0.2);
+}
+
+.about-qa-item h3 {
+  margin: 0;
+}
+
+.about-qa-trigger {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr) 32px;
+  gap: clamp(0.8rem, 1.8vw, 1.5rem);
+  align-items: center;
+  width: 100%;
+  padding: clamp(1.15rem, 2vw, 1.45rem) 0;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: color 180ms ease;
+}
+
+.about-qa-trigger:hover,
+.about-qa-trigger[aria-expanded="true"] {
+  color: var(--about-rose);
+}
+
+.about-qa-trigger:focus-visible {
+  outline: 2px solid rgba(168, 117, 140, 0.58);
+  outline-offset: 7px;
+}
+
+.about-qa-number {
+  color: #8c827b;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+}
+
+.about-qa-prompt {
+  display: grid;
+  gap: 0.32rem;
+}
+
+.about-qa-category {
+  color: #8c827b;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+}
+
+.about-qa-question {
+  font-size: clamp(1.1rem, 1.45vw, 1.3rem);
+  font-weight: 750;
+  line-height: 1.25;
+}
+
+.about-qa-symbol {
+  display: grid;
+  place-items: center;
+  color: var(--about-rose);
+  font-size: 1.55rem;
+  font-weight: 400;
+  line-height: 1;
+  transition: transform 180ms ease;
+}
+
+.about-qa-symbol::before {
+  content: "+";
+}
+
+.about-qa-trigger[aria-expanded="true"] .about-qa-symbol {
+  transform: rotate(180deg);
+}
+
+.about-qa-trigger[aria-expanded="true"] .about-qa-symbol::before {
+  content: "−";
+}
+
+.about-qa-panel[hidden] {
+  display: none;
+}
+
+.about-qa-answer {
+  max-width: 68ch;
+  margin-left: calc(44px + clamp(0.8rem, 1.8vw, 1.5rem));
+  padding: 0 0 clamp(1.75rem, 3vw, 2.5rem);
+}
+
+.about-qa-answer h4 {
+  margin: 0 0 1rem;
+  font-size: clamp(1.35rem, 2vw, 1.8rem);
+  line-height: 1.16;
+}
+
+.about-qa-answer p {
+  max-width: 65ch;
+  margin: 0;
+  color: #5f5852;
+  font-size: clamp(0.98rem, 1.08vw, 1.06rem);
+  line-height: 1.72;
+}
+
+.about-qa-answer p + p {
+  margin-top: 0.85rem;
+}
+
+.about-qa-answer--gallery {
+  max-width: calc(980px - 44px - clamp(0.8rem, 1.8vw, 1.5rem));
+}
+
+.about-qa-photo-strip {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  margin-top: 1.35rem;
+  padding: 0 0 0.65rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior-inline: contain;
+  scroll-snap-type: x proximity;
+  scrollbar-color: rgba(168, 117, 140, 0.68) rgba(36, 33, 31, 0.08);
+  scrollbar-width: thin;
+  -webkit-overflow-scrolling: touch;
+}
+
+.about-qa-photo-strip::-webkit-scrollbar {
+  height: 6px;
+}
+
+.about-qa-photo-strip::-webkit-scrollbar-track {
+  border-radius: 999px;
+  background: rgba(36, 33, 31, 0.08);
+}
+
+.about-qa-photo-strip::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: rgba(168, 117, 140, 0.68);
+}
+
+.about-qa-photo-strip:focus-visible {
+  outline: 2px solid rgba(168, 117, 140, 0.58);
+  outline-offset: 5px;
+}
+
+.about-qa-photo-strip img {
+  display: block;
+  flex: 0 0 auto;
+  width: auto;
+  max-width: none;
+  height: clamp(190px, 15vw, 200px);
+  border-radius: 3px;
+  scroll-snap-align: start;
+}
+
+@media (max-width: 900px) {
+  .about-page .about-hero {
+    grid-template-columns: 1fr;
+    min-height: 0;
+    gap: 3.5rem;
+  }
+
+  .about-page .about-hero-copy {
+    max-width: 720px;
+  }
+
+  .about-page .about-hero .print-strip {
+    justify-self: center;
+  }
+
+}
+
+@media (min-width: 901px) and (max-height: 820px) {
+  .about-page .about-hero {
+    gap: clamp(2rem, 4vw, 4rem);
+    padding-block: 2rem;
+  }
+
+  .about-page .about-hero-copy h1 {
+    margin-bottom: 1.15rem;
+    font-size: clamp(2.5rem, 3.35vw, 3.35rem);
+  }
+
+  .about-page .about-intro-copy {
+    gap: 0.52rem;
+  }
+
+  .about-page .hero-actions {
+    margin-top: 1.15rem;
+  }
+
+  .about-page .about-hero .print-strip {
+    --print-strip-photo-width: 88px;
+    width: min(100%, 360px);
+    padding-block: 20px 22px;
+  }
+}
+
+@media (max-width: 620px) {
+  .about-page .site-header {
+    gap: 0.55rem;
+    padding-inline: 0.75rem;
+  }
+
+  .about-page .brand {
+    gap: 0;
+  }
+
+  .about-page .brand > span:last-child {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+  .about-page .brand-mark {
+    width: 42px;
+    height: 42px;
+    flex-basis: 42px;
+  }
+
+  .about-page .site-header nav {
+    gap: 0.12rem;
+  }
+
+  .about-page .site-header nav a {
+    padding: 0.48rem 0.52rem;
+    font-size: 0.84rem;
+  }
+
+  .about-page .about-hero {
+    padding-top: 3.2rem;
+  }
+
+  .about-page .about-hero-copy h1 {
+    font-size: clamp(2.45rem, 11vw, 3.55rem);
+  }
+
+  .about-page .about-hero .print-strip {
+    --print-strip-photo-width: clamp(104px, 34vw, 120px);
+    width: min(100%, 360px);
+    padding: 28px 20px 30px;
+  }
+
+  .about-page .about-hero .print-strip-picked {
+    width: min(100%, 222px);
+  }
+
+  .about-page .about-hero .print-strip.is-picked {
+    min-height: 696px;
+  }
+
+  .about-page .about-hero .print-strip.is-picked .print-strip-picked {
+    margin: 2px 0 14px;
+    transform: rotate(-1.25deg) scale(0.86);
+    transform-origin: center;
+  }
+
+  .about-qa {
+    padding-block: 3.5rem;
+  }
+
+  .about-qa-heading h2 {
+    font-size: clamp(2.25rem, 10vw, 3.15rem);
+  }
+
+  .about-qa-trigger {
+    grid-template-columns: 28px minmax(0, 1fr) 24px;
+    gap: 0.7rem;
+    padding-block: 1.1rem;
+  }
+
+  .about-qa-category {
+    font-size: 0.6rem;
+  }
+
+  .about-qa-question {
+    font-size: 1.02rem;
+  }
+
+  .about-qa-answer {
+    margin-left: 0;
+    padding: 0 0 1.75rem calc(28px + 0.7rem);
+  }
+
+  .about-qa-answer h4 {
+    font-size: 1.3rem;
+  }
+
+  .about-qa-answer p {
+    font-size: 0.98rem;
+    line-height: 1.65;
+  }
+
+  .about-qa-answer--gallery {
+    max-width: none;
+  }
+
+  .about-qa-photo-strip {
+    gap: 8px;
+    margin-top: 1.15rem;
+  }
+
+  .about-qa-photo-strip img {
+    height: 165px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-qa-trigger,
+  .about-qa-symbol {
+    transition: none;
+  }
+
+  .about-qa-photo-strip {
+    scroll-behavior: auto;
+  }
+}
